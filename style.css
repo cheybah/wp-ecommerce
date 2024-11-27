@@ -1,29 +1,63 @@
+
+
+/* Badge Styling */
 .badge {
-    padding-left: 9px;
-    padding-right: 9px;
-    -webkit-border-radius: 9px;
-    -moz-border-radius: 9px;
-    text-align: center;
-    background: #d7d7d7 !important;
-    font-size: 13px;
-    font-weight: 400;
-    width: 22px;
-    height: 22px;
-    line-height: 22px;
-    display: inline-block;
-    border-radius: 100%;
-  }
-  
-  .label-warning[href],
-  .badge-warning[href] {
-    background-color: #c67605;
-  }
-  #lblCartCount {
-      font-size: 12px;
-      background: #ff0000;
-      color: #fff;
-      padding: 0 5px;
-      vertical-align: top;
-      margin-left: -10px; 
-  }
+  padding-left: 9px;
+  padding-right: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  text-align: center;
+  background: #d7d7d7 !important;
+  font-size: 13px;
+  font-weight: 400;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  display: inline-block;
+  border-radius: 100%;
+}
+
+/* Cart Badge Custom Styling */
+#lblCartCount {
+  font-size: 12px;
+  background: #ff0000;
+  color: #fff;
+  padding: 0 5px;
+  vertical-align: top;
+  margin-left: -10px;
+}
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  color: #111;
+  text-transform: capitalize;
+  font-weight: 400;
+  transition: font-weight 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Style for the active link (Home) */
+.font-poppins.active {
+  font-weight: 600; /* Bold for active link */
+  color: #111;
+}
+
+/* Style for hovering over links */
+.font-poppins:hover {
+  font-weight: 600; /* Bold on hover */
+  color: #111;
+}
+
+
+/* Set the initial color of the icons */
+.fa {
+  color: #666666; /* Default color */
+  font-size: 18px; /* Set the desired icon size */
+}
+
+/* On hover or focus, change the color to red */
+.fa:hover, .fa:focus {
+  color: red; /* Hover color */
+  cursor: pointer;
+}
 
