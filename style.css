@@ -61,3 +61,136 @@
   cursor: pointer;
 }
 
+body, #slider, .wrap, .slide-content{
+  margin:0;
+  padding:0;
+  font-family: Cabin, Helvetica, sans-serif;
+  width:100%;
+  height:100vh;
+  overflow-x:hidden;
+}
+.wrap{position:relative;}
+
+.slide{
+  position:absolute;
+  top: -100%; /* Start above the viewport */
+  left:0;
+  width:100%;
+  height:83%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.5s ease-in-out; /* Add a smooth transition */
+  opacity: 0; /* Initially invisible */
+}
+
+.slide1{background-image: url('./assets/img/slider1_op.jpg');}
+.slide2{background-image: url('./assets/img/slider2_op.jpg');}
+.slide3{background-image: url('./assets/img/slider3_op.jpg');}
+
+.slide-content{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slide-content span{
+  font-size: 5rem;
+  color:#fff;
+  background-color:rgba(0,0,0, .6);
+  padding:10px 20px;
+}
+
+.dir-control{
+  cursor: pointer;
+  position:absolute;
+  top:50%;
+  margin-top:-30px;
+  width:0;
+  height:0;
+  z-index:5;
+}
+
+#dir-control-left{
+  left:0;
+  margin-left:30px;
+}
+
+#dir-control-right{
+  right:0;
+  margin-right:60px;
+}
+.slider-active{
+  visibility:hidden;
+  opacity:0;
+}
+.slide.slide-is-active{
+  visibility:visible;
+  opacity: 1;
+}
+
+.slide-is-active {
+  top: 0; 
+  opacity: 1; 
+}
+
+.slide-transition {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* 1.5 seconds transition */
+}
+
+/* Arrow Base Styling */
+#dir-control-left,
+#dir-control-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);  /* Vertical centering */
+    background: rgba(255, 255, 255, 1); /* White background */
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 50%; /* Circular shape */
+    transition: all 0.3s ease; /* Smooth transition */
+    cursor: pointer;
+    opacity: 0; /* Hidden by default */
+    pointer-events: none; /* Disabled interaction */
+}
+
+/* Visibility on hover */
+.wrap:hover #dir-control-left,
+.wrap:hover #dir-control-right {
+    opacity: 1; /* Visible when hovered */
+    pointer-events: auto; /* Enable interaction */
+}
+
+/* Left arrow adjustments */
+#dir-control-left {
+    left: 10px; /* Adjust left positioning */
+    transform: translateY(-50%); /* Keep it vertically centered */
+    z-index: 10; /* Ensure left arrow is above the slides */
+
+}
+
+/* Right arrow adjustments */
+#dir-control-right {
+    right: 10px; /* Adjust right positioning */
+    transform: translateY(-50%); /* Keep it vertically centered */
+}
+
+/* Arrow icon styling */
+.tparrows i {
+    font-size: 2rem; /* Adjust size */
+    color: black; /* Black arrow */
+}
+
+/* Hover effect */
+.tparrows:hover {
+    background: rgba(255, 255, 255, 0.8); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+
