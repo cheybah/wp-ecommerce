@@ -82,6 +82,8 @@ body, #slider, .wrap, .slide-content{
   background-repeat: no-repeat;
   transition: all 0.5s ease-in-out; /* Add a smooth transition */
   opacity: 0; /* Initially invisible */
+  margin-bottom: 10px; /* Adjust this value to control the space between slides */
+
 }
 
 .slide1{background-image: url('./assets/img/slider1_op.jpg');}
@@ -94,6 +96,9 @@ body, #slider, .wrap, .slide-content{
   justify-content: center;
   align-items: center;
   text-align: center;
+  height: 100%; /* Ensures the content fills the slide height */
+  padding: 0; /* Remove any additional padding */
+  margin: 0; /* Remove any margin causing additional space */
 }
 
 .slide-content span{
@@ -102,6 +107,7 @@ body, #slider, .wrap, .slide-content{
   background-color:rgba(0,0,0, .6);
   padding:10px 20px;
 }
+
 
 .dir-control{
   cursor: pointer;
@@ -191,6 +197,32 @@ body, #slider, .wrap, .slide-content{
 .tparrows:hover {
     background: rgba(255, 255, 255, 0.8); 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+/* Slider Section Styling */
+.slider-section {
+  width: 100%; /* Full width of the page */
+  margin-top: -8.6rem;
+}
+
+.image-container {
+  display: flex; /* Use flexbox to arrange images in a row */
+  justify-content: space-between; /* Distribute images evenly across the container */
+  justify-content: space-around;
+  align-items: center; /* Center images vertically */
+  width: 100%; /* Full width */
+}
+
+.slider-image {
+  width: 23%; /* Make each image take about 1/4th of the container's width */
+  height: auto; /* Keep image aspect ratio */
+  object-fit: cover; /* Ensures the images cover the area, maintaining aspect ratio */
+}
+
+/* Optional: Add hover effect on images */
+.slider-image:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  transition: transform 0.3s ease;
 }
 
 
