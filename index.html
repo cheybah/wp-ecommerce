@@ -22,37 +22,65 @@
             </div>
             <div class="flex items-center justify-between gap-14 text-black font-sans md:flex"
                 style="height: 40px; position: relative; top: 8px; margin-bottom: 0; padding: 0 15px; text-align: center;">
-                <a href="javascript:void(0)" class="font-poppins active" id="home">Home</a>
-                <a href="javascript:void(0)" class="font-poppins">Shop</a>
-                <a href="javascript:void(0)" class="font-poppins">Products</a>
-                <a href="javascript:void(0)" class="font-poppins">Blog</a>
-                <a href="javascript:void(0)" class="font-poppins">Elements</a>
-                <a href="javascript:void(0)" class="font-poppins">Pages</a>
+                <ul class="flex gap-8">
+                    <!-- Home with Dropdown -->
+                    <li class="relative dropdown">
+                        <a href="javascript:void(0)" class="font-poppins dropbtn active" id="home">Home</a>
+                        <div class="dropdown-content">
+                            <a href="#">Submenu 1</a>
+                            <a href="#">Submenu 2</a>
+                            <a href="#">Submenu 3</a>
+                        </div>
+                    </li>
+                    <li class="relative dropdown">
+                        <a href="javascript:void(0)" class="font-poppins dropbtn">Shop</a>
+                        <div class="dropdown-content black-bd">
+                            <a href="#">About Us</a>
+                            <a href="#">Contact Us</a>
+                        </div>
+                    </li>
+                    <li class="relative dropdown">
+                        <a href="javascript:void(0)" class="font-poppins dropbtn">Products</a>
+                        <div class="dropdown-content black-bd">
+                            <a href="#">About Us</a>
+                            <a href="#">Contact Us</a>
+                        </div>
+                    </li>
+                    <li class="relative dropdown">
+                        <a href="javascript:void(0)" class="font-poppins dropbtn">Blog</a>
+                        <div class="dropdown-content black-bd">
+                            <a href="#">About Us</a>
+                            <a href="#">Contact Us</a>
+                        </div>
+                    </li>
+                    <li><a href="javascript:void(0)" class="font-poppins">Elements</a></li>
+                    <!-- Pages with Dropdown -->
+                    <li class="relative dropdown">
+                        <a href="javascript:void(0)" class="font-poppins dropbtn">Pages</a>
+                        <div class="dropdown-content">
+                            <a href="#">About Us</a>
+                            <a href="#">Contact Us</a>
+                        </div>
+                    </li>
+                </ul>
             </div>
+
             <div class="items-center hidden gap-6 md:flex" style="top: 8px">
-                <!-- User Icon -->
                 <i class="fa fa-user"></i>
-
-                <!-- Bars Icon -->
                 <i class="fa fa-bars"></i>
-
-                <!-- Search Icon -->
                 <i class="fa fa-search"></i>
-
-                <!-- Shopping Cart Icon -->
                 <div class="ab-iconcart">
                     <i class="fa fa-shopping-cart"></i>
                     <span class='badge badge-warning' id='lblCartCount'> 5 </span>
                 </div>
             </div>
         </div>
-
     </div>
 
     <!--Hero Section-->
     <div class="wrap">
         <div id="dir-control-left" class="tparrows metis" style="top: 50%; left: 0;">
-            <i class="fa fa-angle-left" aria-hidden="true"></i>
+            <i class="fa fa-angle-left" aria-hidden="true" style="margin-bottom: 15px;"></i>
         </div>
         <div id="slider">
             <div class="slide slide1">
@@ -73,7 +101,7 @@
         </div>
         <div id="dir-control-right" class="tparrows metis"
             style="top: 50%; transform: matrix(1, 0, 0, 1, -160, -30); left: 100%;">
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            <i class="fa fa-angle-right" aria-hidden="true" style="margin-bottom: 15px;"></i>
         </div>
     </div>
 
@@ -87,8 +115,26 @@
         </div>
     </section>
 
+    <!--Featured Products-->
+    <section class="featured-section">
+        <div
+            class="flex items-center justify-center h-screen text-[#111111] text-4xl font-poppins font-semibold capitalize">
+            featured products
+        </div>
+    </section>
+
+    <!--Copyright-->
+    <div id="copyright" align="center">&copy;</div>
+    <script>
+        (function () {
+            let cpr = document.getElementById("copyright");
+            cpr.innerHTML = `Copyright &copy; ${new Date().getFullYear()} <strong> FieldThemes</strong> - All Rights Reserved.`;
+        })();
+    </script>
+    
 
     <script src="./assets/js/slide.js"></script>
+    <script type="module" src="https://unpkg.com/@material-tailwind/html@latest/scripts/popover.js"></script>
 
 </body>
 <html>

@@ -1,4 +1,67 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2.5rem;
+  /* Adjust spacing to match gap-14 in Tailwind */
+}
 
+li {
+  position: relative;
+  /* Ensure dropdowns position correctly */
+}
+
+li a,
+.dropbtn {
+  display: inline-block;
+  color: black;
+  /* Adjust to your design */
+  text-align: center;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #ffffff;
+  /* Hover effect */
+}
+
+/* Dropdown menu styling */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-top: 2px solid red;
+  /* Red top border */
+
+}
+
+.black-bd {
+  border-top: 2px solid black;
+  /* Red top border */
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 /* Badge Styling */
 .badge {
@@ -26,6 +89,7 @@
   vertical-align: top;
   margin-left: -10px;
 }
+
 .font-poppins {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
@@ -33,196 +97,271 @@
   color: #111;
   text-transform: capitalize;
   font-weight: 400;
-  transition: font-weight 0.3s ease, color 0.3s ease; /* Smooth transition */
+  transition: font-weight 0.3s ease, color 0.3s ease;
+  /* Smooth transition */
 }
 
 /* Style for the active link (Home) */
 .font-poppins.active {
-  font-weight: 600; /* Bold for active link */
+  font-weight: 600;
+  /* Bold for active link */
   color: #111;
 }
 
 /* Style for hovering over links */
 .font-poppins:hover {
-  font-weight: 600; /* Bold on hover */
+  font-weight: 600;
+  /* Bold on hover */
   color: #111;
 }
 
 
 /* Set the initial color of the icons */
 .fa {
-  color: #666666; /* Default color */
-  font-size: 18px; /* Set the desired icon size */
+  margin-top: 15px;
+  color: #666666;
+  /* Default color */
+  font-size: 16px;
+  /* Set the desired icon size */
 }
 
 /* On hover or focus, change the color to red */
-.fa:hover, .fa:focus {
-  color: red; /* Hover color */
+.fa:hover,
+.fa:focus {
+  color: red;
+  /* Hover color */
   cursor: pointer;
 }
 
-body, #slider, .wrap, .slide-content{
-  margin:0;
-  padding:0;
+body,
+#slider,
+.wrap,
+.slide-content {
+  margin: 0;
+  padding: 0;
   font-family: Cabin, Helvetica, sans-serif;
-  width:100%;
-  height:100vh;
-  overflow-x:hidden;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
 }
-.wrap{position:relative;}
 
-.slide{
-  position:absolute;
-  top: -100%; /* Start above the viewport */
-  left:0;
-  width:100%;
-  height:83%;
+.wrap {
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  top: -100%;
+  /* Start above the viewport */
+  left: 0;
+  width: 100%;
+  height: 83%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transition: all 0.5s ease-in-out; /* Add a smooth transition */
-  opacity: 0; /* Initially invisible */
-  margin-bottom: 10px; /* Adjust this value to control the space between slides */
+  transition: all 0.5s ease-in-out;
+  /* Add a smooth transition */
+  opacity: 0;
+  /* Initially invisible */
+  margin-bottom: 10px;
+  /* Adjust this value to control the space between slides */
 
 }
 
-.slide1{background-image: url('./assets/img/slider1_op.jpg');}
-.slide2{background-image: url('./assets/img/slider2_op.jpg');}
-.slide3{background-image: url('./assets/img/slider3_op.jpg');}
+.slide1 {
+  background-image: url('./assets/img/slider1_op.jpg');
+}
 
-.slide-content{
-  display:flex;
+.slide2 {
+  background-image: url('./assets/img/slider2_op.jpg');
+}
+
+.slide3 {
+  background-image: url('./assets/img/slider3_op.jpg');
+}
+
+.slide-content {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 100%; /* Ensures the content fills the slide height */
-  padding: 0; /* Remove any additional padding */
-  margin: 0; /* Remove any margin causing additional space */
+  height: 100%;
+  /* Ensures the content fills the slide height */
+  padding: 0;
+  /* Remove any additional padding */
+  margin: 0;
+  /* Remove any margin causing additional space */
 }
 
-.slide-content span{
+.slide-content span {
   font-size: 5rem;
-  color:#fff;
-  background-color:rgba(0,0,0, .6);
-  padding:10px 20px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .6);
+  padding: 10px 20px;
 }
 
 
-.dir-control{
+.dir-control {
   cursor: pointer;
-  position:absolute;
-  top:50%;
-  margin-top:-30px;
-  width:0;
-  height:0;
-  z-index:5;
+  position: absolute;
+  top: 50%;
+  margin-top: -30px;
+  width: 0;
+  height: 0;
+  z-index: 5;
 }
 
-#dir-control-left{
-  left:0;
-  margin-left:30px;
+#dir-control-left {
+  left: 0;
+  margin-left: 30px;
 }
 
-#dir-control-right{
-  right:0;
-  margin-right:60px;
+#dir-control-right {
+  right: 0;
+  margin-right: 60px;
 }
-.slider-active{
-  visibility:hidden;
-  opacity:0;
+
+.slider-active {
+  visibility: hidden;
+  opacity: 0;
 }
-.slide.slide-is-active{
-  visibility:visible;
+
+.slide.slide-is-active {
+  visibility: visible;
   opacity: 1;
 }
 
 .slide-is-active {
-  top: 0; 
-  opacity: 1; 
+  top: 0;
+  opacity: 1;
+}
+
+.ab-iconcart {
+  margin-top: 6px;
+
 }
 
 .slide-transition {
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* 1.5 seconds transition */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  /* 1.5 seconds transition */
 }
 
 /* Arrow Base Styling */
 #dir-control-left,
 #dir-control-right {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);  /* Vertical centering */
-    background: rgba(255, 255, 255, 1); /* White background */
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    border-radius: 50%; /* Circular shape */
-    transition: all 0.3s ease; /* Smooth transition */
-    cursor: pointer;
-    opacity: 0; /* Hidden by default */
-    pointer-events: none; /* Disabled interaction */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /* Vertical centering */
+  background: rgba(255, 255, 255, 1);
+  /* White background */
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 50%;
+  /* Circular shape */
+  transition: all 0.3s ease;
+  /* Smooth transition */
+  cursor: pointer;
+  opacity: 0;
+  /* Hidden by default */
+  pointer-events: none;
+  /* Disabled interaction */
 }
 
 /* Visibility on hover */
 .wrap:hover #dir-control-left,
 .wrap:hover #dir-control-right {
-    opacity: 1; /* Visible when hovered */
-    pointer-events: auto; /* Enable interaction */
+  opacity: 1;
+  /* Visible when hovered */
+  pointer-events: auto;
+  /* Enable interaction */
 }
 
 /* Left arrow adjustments */
 #dir-control-left {
-    left: 10px; /* Adjust left positioning */
-    transform: translateY(-50%); /* Keep it vertically centered */
-    z-index: 10; /* Ensure left arrow is above the slides */
+  left: 10px;
+  /* Adjust left positioning */
+  transform: translateY(-50%);
+  /* Keep it vertically centered */
+  z-index: 10;
+  /* Ensure left arrow is above the slides */
 
 }
 
 /* Right arrow adjustments */
 #dir-control-right {
-    right: 10px; /* Adjust right positioning */
-    transform: translateY(-50%); /* Keep it vertically centered */
+  right: 10px;
+  /* Adjust right positioning */
+  transform: translateY(-50%);
+  /* Keep it vertically centered */
 }
 
 /* Arrow icon styling */
 .tparrows i {
-    font-size: 2rem; /* Adjust size */
-    color: black; /* Black arrow */
+  font-size: 2rem;
+  /* Adjust size */
+  color: black;
+  /* Black arrow */
 }
 
 /* Hover effect */
 .tparrows:hover {
-    background: rgba(255, 255, 255, 0.8); 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Slider Section Styling */
 .slider-section {
-  width: 100%; /* Full width of the page */
-  margin-top: -8.6rem;
+  width: 100%;
+  /* Full width of the page */
+  margin-top: -5.5rem;
 }
 
 .image-container {
-  display: flex; /* Use flexbox to arrange images in a row */
-  justify-content: space-between; /* Distribute images evenly across the container */
+  display: flex;
+  /* Use flexbox to arrange images in a row */
+  justify-content: space-between;
+  /* Distribute images evenly across the container */
   justify-content: space-around;
-  align-items: center; /* Center images vertically */
-  width: 100%; /* Full width */
+  align-items: center;
+  /* Center images vertically */
+  width: 100%;
+  /* Full width */
 }
 
 .slider-image {
-  width: 23%; /* Make each image take about 1/4th of the container's width */
-  height: auto; /* Keep image aspect ratio */
-  object-fit: cover; /* Ensures the images cover the area, maintaining aspect ratio */
+  width: 23%;
+  /* Make each image take about 1/4th of the container's width */
+  height: auto;
+  /* Keep image aspect ratio */
+  object-fit: cover;
+  /* Ensures the images cover the area, maintaining aspect ratio */
 }
 
 /* Optional: Add hover effect on images */
 .slider-image:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
+  transform: scale(1.05);
+  /* Slight zoom on hover */
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 
+.featured-section {
+  /* background-color: #FBF8F7; */
+  background-color: #ff0000;
+  margin-top: 6.25rem;
+}
+
+#copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 15%;
+}
