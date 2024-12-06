@@ -357,6 +357,8 @@ body,
   background-color: #ff0000;
   margin-top: 6.25rem;
   padding-bottom: 6rem;
+  text-align: center;
+
 }
 
 #copyright {
@@ -364,12 +366,9 @@ body,
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 15%;
+  height: 11%;
 }
 
-.featured-section {
-  text-align: center;
-}
 
 .text-container {
   display: inline-block;
@@ -700,5 +699,61 @@ body,
 .social-icon:hover {
   background-color: white;
   color: #000;
+}
+
+.newsletter-section{
+  text-align: center;
+
+}
+
+.form {
+	margin-bottom: 6rem;
+  margin-top:4rem;
+}
+
+.form__email {
+  background: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ebebeb;
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+  color: #666;
+  font-size: 15px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 28px;
+  width: 567px;
+  display: inline-block;
+}
+
+.form__email:focus {
+	outline: 1px solid #111;
+}
+
+.form__button {
+  background: #000;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 15px;
+  box-shadow: none;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  border: none;
+}
+
+.form__button:hover {
+  background: red; /* Change background color on hover */
+}
+
+/* Button text styling */
+.button-text {
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+  font-size: 16px;
+  font-weight: 400; /* Make it slightly bold */
+  color: white;
+  text-transform: uppercase; /* Convert text to uppercase */
 }
 
