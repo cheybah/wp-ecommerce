@@ -38,7 +38,6 @@ li a:hover,
   z-index: 1;
   border-top: 2px solid red;
   /* Red top border */
-
 }
 
 .black-bd {
@@ -165,7 +164,6 @@ body,
   /* Initially invisible */
   margin-bottom: 10px;
   /* Adjust this value to control the space between slides */
-
 }
 
 .slide1 {
@@ -200,7 +198,6 @@ body,
   background-color: rgba(0, 0, 0, .6);
   padding: 10px 20px;
 }
-
 
 .dir-control {
   cursor: pointer;
@@ -239,7 +236,6 @@ body,
 
 .ab-iconcart {
   margin-top: 6px;
-
 }
 
 .slide-transition {
@@ -290,7 +286,6 @@ body,
   /* Keep it vertically centered */
   z-index: 10;
   /* Ensure left arrow is above the slides */
-
 }
 
 /* Right arrow adjustments */
@@ -351,14 +346,12 @@ body,
   cursor: pointer;
 }
 
-
 .featured-section {
   /* background-color: #FBF8F7; */
   background-color: #ff0000;
   margin-top: 6.25rem;
   padding-bottom: 6rem;
   text-align: center;
-
 }
 
 #copyright {
@@ -368,7 +361,6 @@ body,
   align-items: center;
   height: 11%;
 }
-
 
 .text-container {
   display: inline-block;
@@ -398,7 +390,6 @@ body,
   line-height: 16px;
 }
 
-
 .tab_cates {
   display: flex;
   justify-content: center;
@@ -426,8 +417,6 @@ body,
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
-
 
 .title_tabcate.active {
   background-color: #111;
@@ -550,7 +539,6 @@ body,
   overflow: hidden;
   margin-bottom: 20px;
   cursor: pointer; /* Indicate interactivity */
-
 }
 
 .banner-image {
@@ -602,63 +590,60 @@ body,
 
 #footer {
   background-image: url('https://newyork.fieldthemes.com/fashion30/home31/img/cms/home 31/bg_footer.jpg');
-  background-position: center center;
+  background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 85px 0 100px;
+  padding: 85px 15px 100px;
   font-family: 'Poppins', sans-serif;
   color: white;
 }
 
-.footer-content {
-  max-width: 1170px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-.footer-main-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 40px;
-}
-
 .footer-columns {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .footer-column {
-  flex: 1;
-  margin: 0 15px;
+  flex: 1 1 calc(25% - 30px);
   min-width: 200px;
 }
 
 .footer-logo {
   margin-bottom: 20px;
-  max-width: 150px;
 }
 
 .footer-title {
-  font-size: 18px;
-  text-transform: uppercase;
   margin-bottom: 15px;
+  margin-top: 13px;
   font-weight: bold;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: Poppins, Sans-serif;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 20px;
+  padding-left: 11px;
 }
 
 .footer-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  color: #999999;
+  font-size: 15px;
+  font-family: Roboto, Sans-serif;
+  text-transform: capitalize;
+  line-height: 15px;
 }
 
 .footer-list li {
-  margin-bottom: 10px;
+  margin-bottom: 0px; /* Reduced margin between list items */
   font-size: 14px;
-  display: flex;
-  align-items: center;
+  display: block; /* Ensures each list item is on a new line */
 }
 
 .footer-list li i {
@@ -668,19 +653,25 @@ body,
 .footer-list li a {
   color: white;
   text-decoration: none;
+  color: #999999;
+  font-size: 15px;
+  font-family: Roboto, Sans-serif;
+  text-transform: capitalize;
+  line-height: 15px;
 }
 
 .footer-list li a:hover {
   text-decoration: underline;
 }
 
-.footer-social-section {
-  text-align: center;
+.footer-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
-.footer-social-icons {
-  display: inline-flex;
-  gap: 15px;
+.mt {
+  gap: 1rem !important;
 }
 
 .social-icon {
@@ -691,24 +682,50 @@ body,
   display: flex;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
   color: white;
   font-size: 16px;
+  margin-top: 4rem;
 }
 
 .social-icon:hover {
   background-color: white;
-  color: #000;
+  color: black;
 }
 
-.newsletter-section{
+.payment-methods {
   text-align: center;
+  margin-top: 20px;
+}
 
+.footer-additional-links {
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  gap: 2rem; /* Space between the items */
+  margin-top: 3rem; /* Adds some spacing above the links */
+}
+
+.footer-additional-links a {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: Poppins, Sans-serif;
+  font-weight: 300;
+  line-height: 16px;
+  text-decoration: none; /* Removes the underline */
+  transition: color 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.footer-additional-links a:hover {
+  color: red; /* Turns the text red on hover */
+}
+
+
+.newsletter-section {
+  text-align: center;
 }
 
 .form {
-	margin-bottom: 6rem;
-  margin-top:4rem;
+  margin-bottom: 6rem;
+  margin-top: 4rem;
 }
 
 .form__email {
@@ -716,8 +733,8 @@ body,
   border-width: 1px;
   border-style: solid;
   border-color: #ebebeb;
-  font-family: 'Poppins', sans-serif; /* Apply Poppins font */
-  color: #666;
+  font-family: 'Poppins', sans-serif;
+  ..: #666;
   font-size: 15px;
   height: 50px;
   line-height: 50px;
@@ -727,7 +744,7 @@ body,
 }
 
 .form__email:focus {
-	outline: 1px solid #111;
+  outline: 1px solid #111;
 }
 
 .form__button {
@@ -740,20 +757,19 @@ body,
   cursor: pointer;
   margin-left: 15px;
   box-shadow: none;
-  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  transition: background-color 0.3s ease;
   border: none;
 }
 
 .form__button:hover {
-  background: red; /* Change background color on hover */
+  background: red;
 }
 
-/* Button text styling */
 .button-text {
-  font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
-  font-weight: 400; /* Make it slightly bold */
+  font-weight: 400;
   color: white;
-  text-transform: uppercase; /* Convert text to uppercase */
+  text-transform: uppercase;
 }
 
