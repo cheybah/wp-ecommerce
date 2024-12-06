@@ -306,31 +306,72 @@ body,
 /* Slider Section Styling */
 .slider-section {
   width: 100%;
-  /* Full width of the page */
   margin-top: -5.5rem;
 }
 
-.image-container {
+.image-container1 {
   display: flex;
-  justify-content: space-between;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
+  justify-content: space-around; /* Distribute space evenly */
+  align-items: center;          /* Center items vertically */
+  width: 100%;                  /* Ensure full width */
+}
+
+.owl-carousel {
+  width: 100%; /* Ensure the carousel spans the entire container */
+}
+
+.slider-item {
+  position: relative;
+  width: 23%;
+  overflow: hidden;
+}
+
+.slider-item img {
+  max-width: 100%; /* Ensure images resize properly */
+  height: auto;    /* Maintain aspect ratio */
+  
 }
 
 .slider-image {
-  width: 23%;
+  width: 100%;
   height: auto;
   object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-/* Optional: Add hover effect on images */
+
 .slider-image:hover {
   transform: scale(1.05);
-  /* Slight zoom on hover */
   transition: transform 0.3s ease;
   cursor: pointer;
 }
+
+.caption {
+  position: absolute;
+  left: 40px; 
+  bottom: 0;
+  transform: translateX(-50%);
+  background-color: white;
+  padding-left: 30px;
+  padding-right: 15px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 1.25rem;
+  font-weight: normal;
+  color: black;
+  transition: all 0.3s ease;
+  font-family: "Poppins", "Helvetica", "Arial", "sans-serif";
+}
+
+.slider-item:hover .slider-image {
+  transform: scale(1.2); 
+}
+
+.slider-item:hover .caption {
+  bottom: 20px; 
+}
+
+
 
 #copyright {
   display: flex;
