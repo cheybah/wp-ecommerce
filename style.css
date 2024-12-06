@@ -278,22 +278,15 @@ body,
   /* Enable interaction */
 }
 
-/* Left arrow adjustments */
 #dir-control-left {
   left: 10px;
-  /* Adjust left positioning */
   transform: translateY(-50%);
-  /* Keep it vertically centered */
   z-index: 10;
-  /* Ensure left arrow is above the slides */
 }
 
-/* Right arrow adjustments */
 #dir-control-right {
   right: 10px;
-  /* Adjust right positioning */
   transform: translateY(-50%);
-  /* Keep it vertically centered */
 }
 
 /* Arrow icon styling */
@@ -319,23 +312,16 @@ body,
 
 .image-container {
   display: flex;
-  /* Use flexbox to arrange images in a row */
   justify-content: space-between;
-  /* Distribute images evenly across the container */
   justify-content: space-around;
   align-items: center;
-  /* Center images vertically */
   width: 100%;
-  /* Full width */
 }
 
 .slider-image {
   width: 23%;
-  /* Make each image take about 1/4th of the container's width */
   height: auto;
-  /* Keep image aspect ratio */
   object-fit: cover;
-  /* Ensures the images cover the area, maintaining aspect ratio */
 }
 
 /* Optional: Add hover effect on images */
@@ -346,14 +332,6 @@ body,
   cursor: pointer;
 }
 
-.featured-section {
-  /* background-color: #FBF8F7; */
-  background-color: #ff0000;
-  margin-top: 6.25rem;
-  padding-bottom: 6rem;
-  text-align: center;
-}
-
 #copyright {
   display: flex;
   flex-direction: row;
@@ -362,12 +340,18 @@ body,
   height: 11%;
 }
 
-.text-container {
+.featured-section {
+  background-color: #fbf8f7;
+  margin-top: 6.25rem;
+  padding-bottom: 6rem;
+  text-align: center;
+}
+
+.text1-container {
   display: inline-block;
   position: relative;
   font-family: 'Poppins', sans-serif;
   font-size: 40px;
-  /* Adjust as needed */
   font-weight: 600;
   text-transform: capitalize;
   margin-top: 6rem;
@@ -397,7 +381,8 @@ body,
   /* Spacing between items */
   list-style: none;
   padding: 0;
-  margin: 20px 0;
+margin-top: 20px;
+  margin-bottom: 40px;
   /* Adjust spacing around the tabs */
 }
 
@@ -425,19 +410,19 @@ body,
 }
 
 .image-container {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+  display: grid; /* Switch to grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto-adjust columns */
+  gap: 20px; /* Space between the images */
   margin: 0 auto;
+  width: 95%; /* Reduce margin on sides */
+  max-width: 1570px; /* Optional: Set a max-width for the container */
 }
 
 .image-wrapper {
   position: relative;
-  width: 300px;
-  /* Adjust width as needed */
-  height: 400px;
-  /* Adjust height to ensure images are not cropped */
   overflow: hidden;
+  aspect-ratio: 3 / 4; /* Maintain the image aspect ratio */
+  text-align: center; /* Center text for description */
 }
 
 .image-wrapper img {
@@ -496,8 +481,75 @@ body,
 
 .image-wrapper:hover .hover-overlay {
   transform: translateY(0%);
-  /* Moves to the bottom */
 }
+
+/* Description styling */
+.text-container {
+  display: grid; /* Switch to grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto-adjust columns */
+  gap: 20px; /* Space between the images */
+  margin: 0 auto;
+  width: 95%; /* Reduce margin on sides */
+  max-width: 1570px; /* Optional: Set a max-width for the container */
+}
+
+.text-wrapper {
+  text-align: center; /* Center-align text under each image */
+  width: 400px; /* Match the width of the image */
+  margin: 0 10px; /* Space between each text block */
+}
+
+.product-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem; /* Add space between the text and stars */
+  margin-bottom: 8px;
+  margin-top: 15px;
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  font-family: "Poppins", "Helvetica", "Arial", "sans-serif";
+}
+
+.star-rating {
+  display: flex;
+  align-items: center;
+  gap: 2px; /* Space between stars */
+}
+
+.product-details {
+  display: flex;
+  gap: 12rem;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.product-price {
+  font-size: 14px;
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.product-category {
+  text-align: right;
+  text-transform: capitalize;
+  color: #999;
+  font-size: 15px;
+  font-family: "Poppins", "Helvetica", "Arial", "sans-serif";
+  font-weight: normal;
+}
+
 
 /* General Section Styles */
 .custom-section {
@@ -717,7 +769,6 @@ body,
 .footer-additional-links a:hover {
   color: red; /* Turns the text red on hover */
 }
-
 
 .newsletter-section {
   text-align: center;
