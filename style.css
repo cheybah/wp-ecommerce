@@ -99,24 +99,39 @@ input{
 }
 
 #cartDrawer {
-  right: -100%; /* Initially hidden on the right side */
-  transition: right 0.3s ease-in-out;
+  transform: translateX(100%); /* Hidden by default */
+  transition: transform 0.3s ease-in-out; /* Smooth slide effect */
 }
 
-#cartDrawer.show {
-  right: 0; /* Slide the drawer in */
+#cartDrawer.open {
+  transform: translateX(0); /* Fully visible */
 }
 
-#cartDrawer button {
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 40;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Overlay active state */
+#overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+
+
+/* Close button styles */
+#closeCartDrawer {
   background: none;
   border: none;
-  font-size: 2rem;
   cursor: pointer;
-}
-
-#cartDrawer .text-lg {
-  text-align: center;
-  padding: 20px;
 }
 
 /* Dropdown menu styling */
@@ -549,7 +564,6 @@ margin-top: 20px;
   gap: 20px; /* Space between the images */
   margin: 0 auto;
   width: 95%; /* Reduce margin on sides */
-  max-width: 1570px; /* Optional: Set a max-width for the container */
 }
 
 .image-wrapper {
@@ -620,7 +634,7 @@ margin-top: 20px;
 /* Description styling */
 .text-container {
   display: grid; /* Switch to grid layout */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto-adjust columns */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Same as images */
   gap: 20px; /* Space between the images */
   margin: 0 auto;
   width: 95%; /* Reduce margin on sides */
@@ -629,22 +643,23 @@ margin-top: 20px;
 
 .text-wrapper {
   text-align: center; /* Center-align text under each image */
-  width: 400px; /* Match the width of the image */
+  width: 95%; /* Match the width of the image */
   margin: 0 10px; /* Space between each text block */
+  text-align: center;
 }
 
 .product-header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 1rem; /* Add space between the text and stars */
+  gap: 3rem; /* Add space between the text and stars */
   margin-bottom: 8px;
   margin-top: 15px;
 }
 
 .product-name {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   color: #333;
   font-family: "Poppins", "Helvetica", "Arial", "sans-serif";
 }
@@ -652,12 +667,12 @@ margin-top: 20px;
 .star-rating {
   display: flex;
   align-items: center;
-  gap: 2px; /* Space between stars */
+  gap: 1px; /* Space between stars */
 }
 
 .product-details {
   display: flex;
-  gap: 12rem;
+  gap: 8rem;
   align-items: center;
   margin-top: 8px;
 }
