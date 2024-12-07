@@ -27,6 +27,97 @@ li a:hover,
   background-color: #ffffff;
   /* Hover effect */
 }
+#menuDropdownUser, #menuDropdownBars {
+  min-width: 250px;
+  background-color: white;
+  padding: 15px;
+  box-shadow: 0 3px 9.3px 0.7px rgba(0, 0, 0, 0.15);
+  border-top: 3px solid #e51d02 !important;
+  right: 0;
+  margin: 0;
+  border: none;
+}
+
+#menuDropdownUser a, #menuDropdownBars button {
+  transition: background-color 0.3s ease;
+}
+
+#menuDropdownUser a:hover, #menuDropdownBars button:hover {
+  background-color: #f0f0f0;
+}
+
+#menuDropdownBars .flex {
+  gap: 8px;
+}
+
+#menuDropdownBars .flex img {
+  width: 32px;
+  height: 20px;
+  border: 1px solid #ddd;
+}
+
+#menuDropdownBars .flex button {
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#menuDropdownBars .flex button:hover {
+  background-color: #e2e8f0;
+}
+
+#searchDropdown {
+  background: #fff;
+  height: 42px;
+  font-weight: 400;
+  font-size: 14px;
+  position: absolute;
+  top: 40px; /* Adjust based on your layout */
+  border: 1px solid #ebebeb;
+}
+
+.search-icon {
+  background: #111; /* Black background for the icon */
+  width: 42px; /* Fixed width for the button */
+  height: 42px; /* Fixed height for the button */
+  display: flex;
+  border-radius: 0; /* No rounded corners */
+  cursor: pointer;
+}
+
+/* Font Awesome search icon */
+.search-icon i {
+  font-size: 14px; /* Adjust icon size */
+  color: #fff; /* White icon */
+}
+.border-none{
+  outline: none;
+}
+
+input{
+  border: none;
+}
+
+#cartDrawer {
+  right: -100%; /* Initially hidden on the right side */
+  transition: right 0.3s ease-in-out;
+}
+
+#cartDrawer.show {
+  right: 0; /* Slide the drawer in */
+}
+
+#cartDrawer button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#cartDrawer .text-lg {
+  text-align: center;
+  padding: 20px;
+}
 
 /* Dropdown menu styling */
 .dropdown-content {
@@ -368,7 +459,9 @@ body,
 }
 
 .slider-item:hover .caption {
-  bottom: 20px; 
+  bottom: 5rem; 
+  cursor: pointer;
+  color: red;
 }
 
 
@@ -826,7 +919,7 @@ margin-top: 20px;
   border-style: solid;
   border-color: #ebebeb;
   font-family: 'Poppins', sans-serif;
-  ..: #666;
+  color: #666;
   font-size: 15px;
   height: 50px;
   line-height: 50px;

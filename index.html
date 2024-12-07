@@ -19,7 +19,9 @@
 
 <body class="bg-white">
     <!--Header-->
-    <div class="flex flex-col mx-auto bg-white" style="padding-left: 5.5rem; padding-right: 5.5rem;">
+    <div class="flex flex-col mx-auto bg-white"      
+    style="padding-left: 5.5rem; padding-right: 5.5rem; position: sticky; top: 0; box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1); z-index: 1000;">
+
         <div class="relative flex flex-wrap items-center justify-between w-full bg-white group shrink-0"
             style="padding-top: 2.5rem; padding-bottom: 2rem;">
             <div>
@@ -70,20 +72,63 @@
                 </ul>
             </div>
 
-            <div class="items-center hidden gap-6 md:flex" style="top: 8px">
-                <i class="fa fa-user"></i>
-                <i class="fa fa-bars"></i>
-                <i class="fa fa-search"></i>
+            <div class="items-center hidden gap-6 md:flex relative" style="top: 0px">
+                <div class="relative">
+                    <i class="fa fa-user cursor-pointer" id="menuDropdownToggleUser"></i>
+                    <div id="menuDropdownUser" 
+                    class="hidden absolute right-0 bg-white min-w-auto shadow-md  z-10 font-poppins">
+                    <a href="#" class="block px-4 py-2 text-black hover:bg-gray-200">Profile</a>
+                    <a href="#" class="block px-4 py-2 text-black hover:bg-gray-200">Settings</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <i class="fa fa-bars cursor-pointer" id="menuDropdownToggleBars"></i>
+                    <div id="menuDropdownBars"
+                        class="hidden absolute right-0 bg-white min-w-[250px] shadow-lg z-10 font-poppins p-4">
+                        <!-- Flag Section -->
+                        <div class="flex justify-around gap-2">
+                            <img src="https://flagcdn.com/w40/us.png" alt="US" class="w-8 h-5 border">
+                            <img src="https://flagcdn.com/w40/fr.png" alt="FR" class="w-8 h-5 border">
+                            <img src="https://flagcdn.com/w40/es.png" alt="ES" class="w-8 h-5 border">
+                            <img src="https://flagcdn.com/w40/it.png" alt="IT" class="w-8 h-5 border">
+                            <img src="https://flagcdn.com/w40/sa.png" alt="SA" class="w-8 h-5 border">
+                        </div>
+                        <!-- Currency Buttons -->
+                        <div class="flex justify-around gap-2 mt-4">
+                            <button class="border px-3 py-1 font-medium hover:bg-gray-200">EUR €</button>
+                            <button class="border px-3 py-1 font-medium hover:bg-gray-200">USD $</button>
+                        </div>
+                        <!-- Checkout -->
+                        <div class="flex items-center gap-2 mt-4">
+                            <span class="text-black font-medium">✔</span>
+                            <span class="text-black font-medium">Check out</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                <i class="fa fa-search cursor-pointer" id="searchIcon"></i>
+                <!-- Search Dropdown -->
+                <div id="searchDropdown" class="hidden absolute right-0 bg-white min-w-[300px] shadow-lg z-10 pl-4 flex items-center">
+                    <input
+                        class="search_query flex-grow border-none ml-2"
+                        placeholder="Search"
+                    />
+                    <div class="search-icon flex justify-center">
+                        <i class="fa fa-search text-white"></i>
+                    </div>
+                </div>
+                
+                </div>
                 <div class="ab-iconcart">
                     <i class="fa fa-shopping-cart"></i>
-                    <span class='badge badge-warning' id='lblCartCount'> 5 </span>
+                    <span class='badge badge-warning' id='lblCartCount'> 0 </span>
                 </div>
             </div>
         </div>
     </div>
 
     <!--Hero Section-->
-    <div class="wrap">
+    <section class="wrap">
         <div id="dir-control-left" class="tparrows metis" style="top: 50%; left: 0;">
             <i class="fa fa-angle-left" aria-hidden="true" style="margin-bottom: 15px;"></i>
         </div>
@@ -108,7 +153,7 @@
             style="top: 50%; transform: matrix(1, 0, 0, 1, -160, -30); left: 100%;">
             <i class="fa fa-angle-right" aria-hidden="true" style="margin-bottom: 15px;"></i>
         </div>
-    </div>
+    </section>
 
     <!-- Slider Section -->
     <section class="slider-section">
@@ -494,6 +539,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="./assets/js/owl.js"></script>
+    <script src="./assets/js/toggle.js"></script>
 
 </body>
 <html>
