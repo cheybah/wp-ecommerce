@@ -672,6 +672,26 @@ body,
   color: red;
 }
 
+/* Small Mobile (up to 480px) */
+@media (max-width: 480px) {
+  .slider-item {
+    width: 48%;  /* Stack the images vertically on smaller screens */
+    margin: 2px !important;
+  }
+
+  .caption {
+    font-size: 1rem;  /* Reduce caption font size for smaller screens */
+  }
+  .image-container1 {
+    flex-wrap: wrap; /* Allow wrapping for mobile */
+  }
+
+  .slider-section {
+    margin-top: -26.5rem !important;
+  }
+}
+
+
 
 
 #copyright {
