@@ -692,8 +692,6 @@ body,
 }
 
 
-
-
 #copyright {
   display: flex;
   flex-direction: row;
@@ -974,6 +972,23 @@ margin-top: 20px;
   margin: 0;
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .custom-row {
+    flex-direction: column; /* Stack the columns vertically */
+    flex-wrap: nowrap; /* Ensure no wrapping issues */
+  }
+
+  .custom-column {
+    flex: unset; /* Remove flex sizing to allow full width */
+    width: 100%; /* Make each column take full width */
+    margin: 0 0 1rem; /* Add vertical spacing */
+  }
+
+  .banner-wrapper {
+    margin-bottom: 0; /* Adjust spacing for stacked banners */
+  }
 }
 
 /* Responsive Design */
