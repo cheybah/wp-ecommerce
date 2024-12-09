@@ -82,7 +82,7 @@ li a:hover,
 }
 
 .fa:hover, .fa:focus {
-  color: white !important;
+  color: black !important;
 }
 
 .mobile-icon-box:hover .dropdown-content {
@@ -385,10 +385,16 @@ body,
   position: relative;
 }
 
+/* Slider Styles */
+#slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 .slide {
   position: absolute;
   top: -100%;
-  /* Start above the viewport */
   left: 0;
   width: 100%;
   height: 83%;
@@ -396,11 +402,8 @@ body,
   background-position: center;
   background-repeat: no-repeat;
   transition: all 0.5s ease-in-out;
-  /* Add a smooth transition */
   opacity: 0;
-  /* Initially invisible */
   margin-bottom: 10px;
-  /* Adjust this value to control the space between slides */
 }
 
 .slide1 {
@@ -422,11 +425,8 @@ body,
   align-items: center;
   text-align: center;
   height: 100%;
-  /* Ensures the content fills the slide height */
   padding: 0;
-  /* Remove any additional padding */
   margin: 0;
-  /* Remove any margin causing additional space */
 }
 
 .slide-content span {
@@ -539,6 +539,67 @@ body,
 .tparrows:hover {
   background: rgba(255, 255, 255, 0.8);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  /* Resize text and adjust layout for mobile */
+  .slide-content span {
+    font-size: 2rem; /* Smaller font size on mobile */
+    padding: 10px 15px; /* Adjust padding */
+  }
+
+  /* Reduce slide height and make it fit screen better */
+  .slide {
+    height: 60vh;
+  }
+
+  /* Adjust arrows for mobile */
+  #dir-control-left,
+  #dir-control-right {
+    width: 40px;
+    height: 40px;
+  }
+  #dir-control-right{
+    transform: matrix(1, 0, 0, 1, -50, -250) !important;
+  }
+  #dir-control-left{
+    transform: matrix(1, 0, 0, 1, -10, -250) !important;
+  }
+
+  /* Adjust arrows size */
+  .tparrows i {
+    font-size: 1.2rem;
+  }
+
+  /* Increase space for arrows when hovering */
+  .wrap:hover #dir-control-left,
+  .wrap:hover #dir-control-right {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+/* For smaller screens (e.g., smartphones) */
+@media (max-width: 480px) {
+  /* Further adjustments for smaller screens */
+  .slide-content span {
+    font-size: 1.5rem; /* Make the text even smaller */
+    padding: 8px 12px; /* Adjust padding for very small screens */
+  }
+
+  .slide {
+    height: 50vh; /* Reduce slide height further */
+  }
+
+  /* Adjust the arrows for smaller screens */
+  #dir-control-left,
+  #dir-control-right {
+    width: 35px;
+    height: 35px;
+  }
+
+  .tparrows i {
+    font-size: 1rem; /* Smaller arrow size */
+  }
 }
 
 /* Slider Section Styling */
