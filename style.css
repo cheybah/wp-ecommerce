@@ -1,3 +1,8 @@
+html{
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -27,6 +32,132 @@ li a:hover,
   background-color: #ffffff;
   /* Hover effect */
 }
+
+.plx{
+  padding-left: 5.5rem !important;
+  padding-right: 5.5rem !important;
+}
+
+.ply {
+  padding-top: 2.5rem !important;
+  padding-bottom: 2.5rem !important;
+}
+
+@media (max-width: 1024px) {
+  .plx {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+  }
+
+  .ply{
+    padding-bottom : 0 !important;
+  }
+
+  .mobile-icon-box {
+    width: 25%; /* Each icon box takes 1/4th of the available width */
+    height: 4rem; /* Set the height */
+    background-color: #f00; /* Red background */
+    display: flex;
+    justify-content: center; /* Centers the icon horizontally */
+    align-items: center; /* Centers the icon vertically */
+    
+}
+
+.mobile-icon-box i {
+    color: #fff; /* White color for the icons */
+    margin-bottom: 10px; /* Remove any bottom margin */
+
+}
+
+.bl {
+  border-left : solid 1px white;
+}
+
+.mobile-icon-box .dropdown-content {
+  position: absolute; /* Ensure dropdown appears correctly */
+  top: 100%; /* Dropdown right below the icon */
+  left: 50%; /* Center */
+  transform: translateX(-50%); /* Adjust */
+  display: none; /* Initially hidden */
+}
+
+.fa:hover, .fa:focus {
+  color: white !important;
+}
+
+.mobile-icon-box:hover .dropdown-content {
+  display: block; /* Show dropdown on hover */
+}
+
+.bdg {
+  background: white !important;
+}
+}
+
+#mobileDropdownUser,
+#mobileDropdownBars {
+  top: 100%; /* Position right below the icon */
+  left: 50%; /* Center dropdown relative to the icon */
+  transform: translateX(-50%); /* Adjust for proper centering */
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 3px 9.3px 0.7px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  width: max-content; /* Adjust width to content */
+}
+
+#mobileDropdownSearch {
+  width: max-content; /* Adjust width to content */
+  top: 100%; /* Position right below the icon */
+  left: 50%; /* Center dropdown relative to the icon */
+  transform: translateX(-50%); /* Adjust for proper centering */
+}
+
+#mobileCartDrawer {
+  transition: transform 0.3s ease;
+  right: -100%;
+}
+
+#cartOverlay {
+  display: none; /* Initially hidden */
+}
+
+/* Active state for mobile cart drawer */
+#mobileCartDrawer.active {
+  right: 0; /* Show drawer */
+}
+
+#cartOverlay.active {
+  display: block; /* Show overlay */
+  opacity:0.5;
+}
+
+
+.mobile-icon-box {
+  position: relative;
+}
+
+.mobile-icon-box .dropdown-content {
+  top: 100%;
+  left: 0;
+}
+
+.mobile-icon-box:hover .dropdown-content {
+  display: block;
+}
+
+.menu-links{
+  top: 8px !important;
+  height: 40px; 
+  position: relative; 
+  margin-bottom: 0; 
+  padding: 0 15px; 
+  text-align: center;
+}
+
+
+
+
 #menuDropdownUser, #menuDropdownBars {
   min-width: 250px;
   background-color: white;
@@ -342,6 +473,7 @@ body,
 
 .ab-iconcart {
   margin-top: 6px;
+  top: -2px;
 }
 
 .slide-transition {
