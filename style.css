@@ -908,6 +908,31 @@ margin-top: 20px;
     text-align: center;
   }
 
+  .featured-container{
+    display: flex !important; 
+    overflow-x: auto; /* Enable horizontal scroll */
+    gap: 5px !important; /* Reduce gap between images */
+    margin: 0 auto;
+    padding-bottom: 10px; /* Add space below */
+    scroll-snap-type: x mandatory; /* Smooth scrolling behavior */
+    width: 100%; /* Full-width container */
+  }
+
+  .featured-item{
+    flex: 0 0 auto; /* Make each image-wrapper fit its content */
+    text-align: center; /* Center-align text and image */
+    scroll-snap-align: start; /* Snap to the start of each image-wrapper */
+    width: 200px; /* Define a fixed width for better control */
+    border-radius: 0px !important; /* Optional: Add rounded corners */
+  }
+
+
+  .image-wrapper img {
+    width: 100%; /* Responsive images within the wrapper */
+    aspect-ratio: 4 / 5; /* Maintain the correct aspect ratio for images */
+    object-fit: cover; /* Ensure the image fits nicely */
+  }
+
   .underline {
     width: 50px; /* Reduce underline width */
   }
@@ -933,8 +958,6 @@ margin-top: 20px;
     padding-bottom: 10px; /* Add space below */
     scroll-snap-type: x mandatory; /* Smooth scrolling behavior */
     width: 100%; /* Full-width container */
-
-
   }
 
   .image-wrapper {
@@ -965,8 +988,10 @@ margin-top: 20px;
     font-size: 14px; 
     color: #333; 
     font-family: "Poppins", sans-serif;
+    padding: 0px !important;
+    padding-bottom: 10px !important;
+    padding-right: 10px !important;
   }
-
 
   .product-header {
     display: flex;
@@ -976,7 +1001,7 @@ margin-top: 20px;
   }
 
   .product-name {
-    font-size: 16px; 
+    font-size: 16px !important; 
   }
 
   .star-rating {
