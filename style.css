@@ -1200,4 +1200,83 @@ margin-top: 20px;
   color: white;
   text-transform: uppercase;
 }
+@media (max-width: 480px) {
+  .text1-container{
+    font-size: 30px !important;
+  }
+  .subtext {
+    font-size: 16px; /* Adjust text size for small screens */
+  }
+
+  .form {
+    display: flex ;
+    flex-direction: row; /* Ensure row layout remains on mobile */
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+
+  }
+
+  .form__email {
+    flex: unset;
+    width: 100%; /* Full width for stacked layout (optional, for ultra-small screens) */
+  }
+
+  
+  .form__button {
+    flex: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-main-section {
+    flex-direction: column; /* Stack all columns vertically */
+    align-items: center; /* Center-align all content */
+  }
+
+  .footer-column {
+    max-width: 100%; /* Allow columns to take full width */
+  }
+
+  .footer-title {
+    text-align: center; /* Ensure footer-title is centered on mobile */
+  }
+
+  .footer-logo {
+    display: block;
+    margin: 0 auto; /* Center logo on mobile */
+  }
+
+  .footer-list {
+    text-align: center; /* Center-align text within lists */
+  }
+
+  .footer-additional-links {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to new rows */
+    justify-content: center; /* Center links horizontally */
+    gap: 0.5rem; /* Adjust spacing for smaller screens */
+    padding: 1rem; /* Add padding for spacing around the container */
+    margin: 0 auto; /* Center the section within the screen */
+
+  }
+
+  .footer-additional-links a {
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 14px;
+    white-space: nowrap; /* Prevent links from breaking into multiple lines */
+    margin: 0; /* Remove unnecessary margins */
+    line-height: 16px;
+    font-family: Poppins, Sans-serif;
+  }
+
+  .footer-social-icons {
+    flex-direction: row; /* Ensure icons remain inline */
+    gap: 1rem; /* Keep consistent spacing */
+  }
+
+  .fab{
+    padding: 7px 15px !important;
+  }
+}
 
