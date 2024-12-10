@@ -306,188 +306,191 @@
                 <span class="title_tabcate" data-tab="7">others</span>
             </li>
         </ul>
-        <div class="image-container">
-            <div class="image-wrapper">
-                <img class="cover-image" src="./assets/img/feat1.jpg" alt="Feature 1">
-                <img class="hover-image" src="./assets/img/feat5.jpg" alt="Hover 1">
-                <div class="hover-overlay">Quick Shop</div>
-            </div>
-            <div class="image-wrapper">
-                <img class="cover-image" src="./assets/img/feat2.jpg" alt="Feature 2">
-                <img class="hover-image" src="./assets/img/feat6.jpg" alt="Hover 2">
-                <div class="hover-overlay">Quick Shop</div>
-            </div>
-            <div class="image-wrapper">
-                <img class="cover-image" src="./assets/img/feat3.jpg" alt="Feature 3">
-                <img class="hover-image" src="./assets/img/feat7.jpg" alt="Hover 3">
-                <div class="hover-overlay">Quick Shop</div>
-            </div>
-            <div class="image-wrapper">
-                <img class="cover-image" src="./assets/img/feat4.jpg" alt="Feature 4">
-                <img class="hover-image" src="./assets/img/feat8.jpg" alt="Hover 4">
-                <div class="hover-overlay">Quick Shop</div>
-            </div>
-        </div>
-
-        <div class="text-container">
-            <div class="text-wrapper">
-                <div class="product-header">
-                    <p class="product-name">Lorem is impulse</p>
-                    <div class="star-rating">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                            height="17">
-                            <path
-                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                            height="17">
-                            <path
-                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                            height="17">
-                            <path
-                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                            height="17">
-                            <path
-                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                            height="17">
-                            <path
-                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                        </svg>
+        <div class="featured-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Featured Item -->
+            <div class="featured-item bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="image-wrapper">
+                    <img class="cover-image w-full" src="./assets/img/feat1.jpg" alt="Feature 1">
+                    <img class="hover-image w-full" src="./assets/img/feat5.jpg" alt="Hover 1">
+                    <div class="hover-overlay">Quick Shop</div>
+                </div>
+                <div class="text-wrapper p-4">
+                    <div class="product-header flex justify-between items-center">
+                        <p class="product-name text-lg font-semibold text-gray-800">Lorem is impulse</p>
+                        <div class="star-rating flex space-x-1">
+                            <!-- SVG stars -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
+                                height="17">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
+                                height="17">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
+                                height="17">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
+                                height="17">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
+                                height="17">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-details mt-2">
+                        <p class="product-price text-lg font-bold text-gray-800">€212.62 <span
+                                class="original-price">€255.15</span></p>
+                        <p class="product-category text-sm text-gray-500">Fashion</p>
                     </div>
                 </div>
-                <div class="product-details">
-                    <p class="product-price">
-                        €212.62 <span class="original-price">€255.15</span>
-                    </p>
-                    <p class="product-category">Fashion</p>
-                </div>
             </div>
 
-
-            <div class="text-wrapper">
-                <div class="product-header">
-                    <p class="product-name">Lorem is impulse</p>
-                    <div class="star-rating">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                            height="17">
-                            <path
-                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                            height="17">
-                            <path
-                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                            height="17">
-                            <path
-                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                            height="17">
-                            <path
-                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                            height="17">
-                            <path
-                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                        </svg>
+            <div class="featured-item bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="image-wrapper">
+                    <img class="cover-image w-full" src="./assets/img/feat2.jpg" alt="Feature 1">
+                    <img class="hover-image w-full" src="./assets/img/feat6.jpg" alt="Hover 1">
+                    <div class="hover-overlay">Quick Shop</div>
+                </div>
+                <div class="text-wrapper p-4">
+                    <div class="product-header flex justify-between items-center">
+                        <p class="product-name text-lg font-semibold text-gray-800">Lorem is impulse</p>
+                        <div class="star-rating flex space-x-1">
+                            <!-- SVG stars -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
+                                height="17">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
+                                height="17">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
+                                height="17">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
+                                height="17">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
+                                height="17">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-details mt-2">
+                        <p class="product-price text-lg font-bold text-gray-800">€212.62 <span
+                                class="original-price">€255.15</span></p>
+                        <p class="product-category text-sm text-gray-500">Fashion</p>
                     </div>
                 </div>
-                <div class="product-details">
-                    <p class="product-price">
-                        €212.62 <span class="original-price">€255.15</span>
-                    </p>
-                    <p class="product-category">Fashion</p>
-                </div>
             </div>
 
-            <div class="text-wrapper">
-                <div class="product-header">
-                    <p class="product-name">Lorem is impulse</p>
-                    <div class="star-rating">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                            height="17">
-                            <path
-                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                            height="17">
-                            <path
-                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                            height="17">
-                            <path
-                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                            height="17">
-                            <path
-                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                            height="17">
-                            <path
-                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                        </svg>
+            <div class="featured-item bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="image-wrapper">
+                    <img class="cover-image w-full" src="./assets/img/feat3.jpg" alt="Feature 1">
+                    <img class="hover-image w-full" src="./assets/img/feat7.jpg" alt="Hover 1">
+                    <div class="hover-overlay">Quick Shop</div>
+                </div>
+                <div class="text-wrapper p-4">
+                    <div class="product-header flex justify-between items-center">
+                        <p class="product-name text-lg font-semibold text-gray-800">Lorem is impulse</p>
+                        <div class="star-rating flex space-x-1">
+                            <!-- SVG stars -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
+                                height="17">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
+                                height="17">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
+                                height="17">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
+                                height="17">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
+                                height="17">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-details mt-2">
+                        <p class="product-price text-lg font-bold text-gray-800">€212.62 <span
+                                class="original-price">€255.15</span></p>
+                        <p class="product-category text-sm text-gray-500">Fashion</p>
                     </div>
                 </div>
-                <div class="product-details">
-                    <p class="product-price">
-                        €212.62 <span class="original-price">€255.15</span>
-                    </p>
-                    <p class="product-category">Fashion</p>
-                </div>
             </div>
 
-            <div class="text-wrapper">
-                <div class="product-header">
-                    <p class="product-name">Lorem is impulse</p>
-                    <div class="star-rating">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                            height="17">
-                            <path
-                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                            height="17">
-                            <path
-                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                            height="17">
-                            <path
-                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                            height="17">
-                            <path
-                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                            height="17">
-                            <path
-                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                        </svg>
+            <div class="featured-item bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="image-wrapper">
+                    <img class="cover-image w-full" src="./assets/img/feat4.jpg" alt="Feature 1">
+                    <img class="hover-image w-full" src="./assets/img/feat8.jpg" alt="Hover 1">
+                    <div class="hover-overlay">Quick Shop</div>
+                </div>
+                <div class="text-wrapper p-4">
+                    <div class="product-header flex justify-between items-center">
+                        <p class="product-name text-lg font-semibold text-gray-800">Lorem is impulse</p>
+                        <div class="star-rating flex space-x-1">
+                            <!-- SVG stars -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
+                                height="17">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
+                                height="17">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
+                                height="17">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
+                                height="17">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
+                                height="17">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-details mt-2">
+                        <p class="product-price text-lg font-bold text-gray-800">€212.62 <span
+                                class="original-price">€255.15</span></p>
+                        <p class="product-category text-sm text-gray-500">Fashion</p>
                     </div>
                 </div>
-                <div class="product-details">
-                    <p class="product-price">
-                        €212.62 <span class="original-price">€255.15</span>
-                    </p>
-                    <p class="product-category">Fashion</p>
-                </div>
             </div>
-
-        </div>
     </section>
 
     <!-- Mosaic Section -->
@@ -617,10 +620,8 @@
                 <img src="https://newyork.fieldthemes.com/fashion30/home31/img/cms/home 31/payment_op.png"
                     alt="Payment Methods" style="max-width: 100%;">
             </div>
-
         </div>
     </footer>
-
 
 
     <!--Copyright-->
