@@ -43,6 +43,10 @@ li a:hover,
   padding-bottom: 2.5rem !important;
 }
 
+.topmin{
+  top: -2px !important;
+}
+
 @media (max-width: 1024px) {
   .plx {
       padding-left: 0 !important;
@@ -256,6 +260,20 @@ input{
   opacity: 1;
 }
 
+/* Styles */
+.ctrl-left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.ctrl-right {
+  position: absolute;
+  top: 50% !important;
+  left: 100% !important;
+  transform: matrix(1, 0, 0, 1, -110, -30) !important;
+}
 
 
 /* Close button styles */
@@ -1219,6 +1237,11 @@ margin-top: 20px;
 
 .mt {
   gap: 1rem !important;
+  margin-top: 1.75rem !important;
+}
+
+.mb{
+  margin-bottom: 15px !important;
 }
 
 .social-icon {
