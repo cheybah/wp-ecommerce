@@ -441,6 +441,9 @@ body,
 .slide3 {
   background-image: url('./assets/img/slider3_op.jpg');
 }
+.slide4 {
+  background-image: url('./assets/img/BANNER_ACC.png');
+}
 
 .slide-content {
   display: flex;
