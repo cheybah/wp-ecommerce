@@ -54,6 +54,16 @@
                             <a href="#">Contact Us</a>
                         </div>
                     </li>
+                    <!-- Accessories with Dropdown -->
+                    <li class="relative dropdown">
+                        <a href="javascript:void(0)" class="font-poppins dropbtn" id="accessories">Accessories</a>
+                        <div class="dropdown-content black-bd hidden">
+                            <a href="#">Wedding Accessories</a>
+                            <a href="#">Bridal Crowns</a>
+                            <a href="#">Head Pieces</a>
+                            <a href="#">Bouquets</a>
+                        </div>
+                    </li>
                     <!-- Blog Menu -->
                     <li class="relative dropdown">
                         <a href="javascript:void(0)" class="font-poppins dropbtn">Blog</a>
@@ -148,8 +158,65 @@
         <!-- Mobile View: Visible only on small screens -->
         <div class="block sm:block lg:hidden bg-white ply">
             <!-- Logo for Mobile -->
-            <div class="flex justify-center mb-8">
-                <img src="./assets/img/logo.jpg" alt="Logo" class="h-10">
+            <div class="flex justify-between items-center px-4 py-2 pb">
+                <!-- Hamburger Icon -->
+                <button id="mobileMenuToggle" class="text-xl text-black">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <!-- Logo -->
+                <img src="./assets/img/logo.jpg" alt="Logo" class="h-10 absolute left-0 right-0 mx-auto">
+            </div>
+
+            <!-- Mobile Side Menu -->
+            <div id="mobileSideMenu"
+                class="fixed left-[-100%] h-full bg-white shadow-lg z-50 transition-transform duration-500 ease-in-out"
+                style="width: 80%; max-width: 300px; top: 4rem">
+                <button id="closeMobileMenu" class="absolute top-4 right-4 text-black text-2xl left-4">&times;</button>
+                <ul class="mt-12 space-y-6 pl-6 font-poppins flex flex-col left-4">
+                    <li><a href="#" class="text-black text-md font-poppins dropbtn ">Home</a></li>
+
+                    <li class="relative">
+                        <button id="shopDropdown" class="flex items-center text-black text-md font-poppins dropbtn">
+                            Shop
+                            <span id="shopArrow"
+                                class="ml-auto transform transition-transform duration-300">&#9662;</span>
+                        </button>
+                        <ul id="shopSubmenu" class="mt-2 pl-3 hidden flex flex-col gap-ul">
+                            <li><a href="#" class="text-black text-sm font-poppins">About Us</a></li>
+                            <li><a href="#" class="text-black text-sm font-poppins">Conatct Us</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="relative">
+                        <button id="productsDropdown" class="flex items-center text-black text-md font-poppins dropbtn">
+                            Products
+                            <span id="productsArrow"
+                                class="ml-auto transform transition-transform duration-300">&#9662;</span>
+                        </button>
+                        <ul id="productsSubmenu" class="mt-2 pl-3 hidden flex flex-col gap-ul">
+                            <li><a href="#" class="text-black text-sm font-poppins">About Us Products</a></li>
+                            <li><a href="#" class="text-black text-sm font-poppins">Contact Us Products</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="relative">
+                        <button id="accessoriesDropdown" class="flex items-center text-black text-md font-poppins dropbtn">
+                            Accessories
+                            <span id="accessoriesArrow"
+                                class="ml-auto transform transition-transform duration-300">&#9662;</span>
+                        </button>
+                        <ul id="accessoriesSubmenu" class="mt-2 pl-3 hidden flex flex-col gap-ul">
+                            <li><a href="#" class="text-black text-sm font-poppins">Wedding Accessories</a></li>
+                            <li><a href="#" class="text-black text-sm font-poppins">Bridal Crowns</a></li>
+                            <li><a href="#" class="text-black text-sm font-poppins">Head Pieces</a></li>
+                            <li><a href="#" class="text-black text-sm font-poppins">Bouquets</a></li>
+                        </ul>
+                    </li>        
+
+                    <li><a href="#" class="text-black text-md font-poppins dropbtn ">Blog</a></li>
+                    <li><a href="#" class="text-black text-md font-poppins dropbtn ">Elements</a></li>
+                    <li><a href="#" class="text-black text-md font-poppins dropbtn ">Pages</a></li>
+                </ul>
             </div>
 
             <!-- Icons for Mobile -->
@@ -640,6 +707,8 @@
     <script src="./assets/js/drawer.js"></script>
     <script src="./assets/js/mobileToggle.js"></script>
     <script src="./assets/js/mobileDrawer.js"></script>
+    <script src="./assets/js/sideMenuMobile.js"></script>
+
 
 
 </body>

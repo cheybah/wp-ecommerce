@@ -57,6 +57,9 @@ li a:hover,
     padding-bottom : 0 !important;
   }
 
+  .pb{
+    padding-bottom : 1.5rem !important;
+  }
   .mobile-icon-box {
     width: 25%; /* Each icon box takes 1/4th of the available width */
     height: 4rem; /* Set the height */
@@ -160,7 +163,10 @@ li a:hover,
 }
 
 
-
+.gap-ul{
+  gap: 1rem !important;
+  margin-left : 0.5rem;
+}
 
 #menuDropdownUser, #menuDropdownBars {
   min-width: 250px;
