@@ -1,0 +1,61 @@
+/* Custom Owl Carousel Styles */
+.owl-nav button {
+    background: rgba(0,0,0,0.5) !important;
+    color: white !important;
+    width: 40px;
+    height: 40px;
+    border-radius: 50% !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.owl-nav .owl-prev { left: 20px; }
+.owl-nav .owl-next { right: 20px; }
+
+.owl-dots { 
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+.owl-dot { 
+    background: #ddd !important;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.owl-dot.active { background: #000 !important; }
+
+/* Custom Modal Overlay */
+#productModal {
+    backdrop-filter: blur(5px);
+}
+
+/* Hero Section Image Overlay */
+.hero-overlay {
+    background: linear-gradient(0deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 100%);
+}
+
+/* Category Card Hover Effect */
+.category-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Quantity Input Styles */
+.quantity-input {
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance: textfield;
+}
+
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}

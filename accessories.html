@@ -5,6 +5,21 @@
     <title>Shop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./accessories.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+<!-- For components/plugins -->
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          poppins: ['Poppins', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -292,271 +307,101 @@
     </div>
 
 
-    <!-- Featured Products -->
-    <section class="featured-section">
-        <div class="text1-container">
-            <p>Mon Bien Accessories</p>
-            <div class="underline"></div>
+    <!-- Category Hero Section -->
+    <section class="relative h-96 flex items-center justify-center">
+        <div class="absolute inset-0">
+            <img src="./assets/img/BANNER_ACC.png" alt="Accessories" class="w-full h-full object-cover opacity-90">
         </div>
-        <p class="subtext">A collection of textile samples lay spread out on the table Samsa was a travelled</p>
-        <ul class="tab_cates text-center">
-            <li class="nav-item d-inline-block">
-                <span class="title_tabcate active" data-tab="1">Wedding Accessories</span>
-            </li>
-            <li class="nav-item d-inline-block">
-                <span class="title_tabcate" data-tab="2">Bridal Crowns</span>
-            </li>
-            <li class="nav-item d-inline-block">
-                <span class="title_tabcate" data-tab="3">Head Pieces</span>
-            </li>
-            <li class="nav-item d-inline-block">
-                <span class="title_tabcate" data-tab="4">Bouquets</span>
-            </li>
-        </ul>
-        <div class="featured-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-8">
-            <!-- Featured Item -->
-            <div class="featured-item bg-white rounded-lg shadow-md overflow-hidden">
-                <div class="image-wrapper">
-                    <img class="cover-image w-full" src="./assets/img/feat1.jpg" alt="Feature 1">
-                    <img class="hover-image w-full" src="./assets/img/feat5.jpg" alt="Hover 1">
-                    <div class="hover-overlay">Quick Shop</div>
-                </div>
-                <div class="text-wrapper p-4">
-                    <div class="product-header flex justify-between items-center">
-                        <p class="product-name text-lg font-semibold text-gray-800">Lorem is impulse</p>
-                        <div class="star-rating flex space-x-1">
-                            <!-- SVG stars -->
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                                height="17">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                                height="17">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                                height="17">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                                height="17">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                                height="17">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="product-details justify-between mt-2">
-                        <p class="product-price text-lg font-bold text-gray-800">€212.62 <span
-                                class="original-price">€255.15</span></p>
-                        <p class="product-category text-sm text-gray-500">Fashion</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="featured-item bg-white rounded-lg shadow-md overflow-hidden">
-                <div class="image-wrapper">
-                    <img class="cover-image w-full" src="./assets/img/feat2.jpg" alt="Feature 1">
-                    <img class="hover-image w-full" src="./assets/img/feat6.jpg" alt="Hover 1">
-                    <div class="hover-overlay">Quick Shop</div>
-                </div>
-                <div class="text-wrapper p-4">
-                    <div class="product-header flex justify-between items-center">
-                        <p class="product-name text-lg font-semibold text-gray-800">Lorem is impulse</p>
-                        <div class="star-rating flex space-x-1">
-                            <!-- SVG stars -->
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                                height="17">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                                height="17">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                                height="17">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                                height="17">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                                height="17">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="product-details mt-2">
-                        <p class="product-price text-lg font-bold text-gray-800">€212.62 <span
-                                class="original-price">€255.15</span></p>
-                        <p class="product-category text-sm text-gray-500">Fashion</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="featured-item bg-white rounded-lg shadow-md overflow-hidden">
-                <div class="image-wrapper">
-                    <img class="cover-image w-full" src="./assets/img/feat3.jpg" alt="Feature 1">
-                    <img class="hover-image w-full" src="./assets/img/feat7.jpg" alt="Hover 1">
-                    <div class="hover-overlay">Quick Shop</div>
-                </div>
-                <div class="text-wrapper p-4">
-                    <div class="product-header flex justify-between items-center">
-                        <p class="product-name text-lg font-semibold text-gray-800">Lorem is impulse</p>
-                        <div class="star-rating flex space-x-1">
-                            <!-- SVG stars -->
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                                height="17">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                                height="17">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                                height="17">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                                height="17">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                                height="17">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="product-details mt-2">
-                        <p class="product-price text-lg font-bold text-gray-800">€212.62 <span
-                                class="original-price">€255.15</span></p>
-                        <p class="product-category text-sm text-gray-500">Fashion</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="featured-item bg-white rounded-lg shadow-md overflow-hidden">
-                <div class="image-wrapper">
-                    <img class="cover-image w-full" src="./assets/img/feat4.jpg" alt="Feature 1">
-                    <img class="hover-image w-full" src="./assets/img/feat8.jpg" alt="Hover 1">
-                    <div class="hover-overlay">Quick Shop</div>
-                </div>
-                <div class="text-wrapper p-4">
-                    <div class="product-header flex justify-between items-center">
-                        <p class="product-name text-lg font-semibold text-gray-800">Lorem is impulse</p>
-                        <div class="star-rating flex space-x-1">
-                            <!-- SVG stars -->
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                                height="17">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                                height="17">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                                height="17">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                                height="17">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD700" viewBox="0 0 24 24" width="17"
-                                height="17">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="product-details mt-2">
-                        <p class="product-price text-lg font-bold text-gray-800">€212.62 <span
-                                class="original-price">€255.15</span></p>
-                        <p class="product-category text-sm text-gray-500">Fashion</p>
-                    </div>
-                </div>
-            </div>
+        <div class="relative z-10 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Bridal Accessories</h1>
+            <p class="text-xl text-white max-w-2xl mx-auto">Complete your bridal look with our carefully curated collection</p>
+        </div>
     </section>
 
-    <!-- Explore More -->
+    <!-- Category Navigation Grid -->
+    <section class="container mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Wedding Accessories Card -->
+            <a href="accessories/wedding-accessories.html" class="group relative block overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
+                <img src="./assets/img/accessories/corwn2.jpg" alt="Wedding Accessories" class="w-full h-96 object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                    <h3 class="text-3xl font-bold text-white tracking-wide">Wedding Accessories</h3>
+                </div>
+            </a>
 
-    <!-- Mosaic Section -->
-    <div class="custom-section">
-        <div class="custom-container">
-            <div class="custom-row">
-                <!-- Banner 1 -->
-                <div class="custom-column">
-                    <div class="banner-wrapper">
-                        <img src="./assets/img/mosaic1.jpg" alt="Banner 1" class="banner-image">
-                        <div class="banner-content">
-                            <h2>Fashion Women's</h2>
-                        </div>
-                    </div>
+            <!-- Bridal Crowns Card -->
+            <a href="accessories/bridal-crowns.html" class="group relative block overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
+                <img src="./assets/img/accessories/crown1.jpg" alt="Bridal Crowns" class="w-full h-96 object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                    <h3 class="text-3xl font-bold text-white tracking-wide">Bridal Crowns</h3>
                 </div>
-                <!-- Banners 2 and 3 (stacked vertically) -->
-                <div class="custom-column double-column">
-                    <div class="banner-wrapper">
-                        <img src="./assets/img/mosaic2.jpg" alt="Banner 2" class="banner-image shrink mb-4">
-                        <div class="banner-content">
-                            <h2>Kids Summer</h2>
-                        </div>
-                    </div>
-                    <div class="banner-wrapper">
-                        <img src="./assets/img/mosaic3.jpg" alt="Banner 3" class="banner-image shrink">
-                        <div class="banner-content">
-                            <h2>Linen Blend Dress</h2>
-                        </div>
-                    </div>
+            </a>
+
+            <!-- Bouquets Card -->
+            <a href="accessories/bouquets.html" class="group relative block overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
+                <img src="./assets/img/accessories/bouquet1.jpg" alt="Bouquets" class="w-full h-96 object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                    <h3 class="text-3xl font-bold text-white tracking-wide">Bouquets</h3>
                 </div>
-                <!-- Banner 4 -->
-                <div class="custom-column">
-                    <div class="banner-wrapper">
-                        <img src="./assets/img/mosaic4.jpg" alt="Banner 4" class="banner-image">
-                        <div class="banner-content">
-                            <h2>Fashion Men's</h2>
+            </a>
+        </div>
+    </section>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="relative max-w-6xl mx-auto bg-white rounded-lg shadow-2xl my-12 p-8">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-3xl text-gray-600">&times;</button>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Image Carousel -->
+                <div class="owl-carousel owl-theme">
+                    <div class="item"><img src="./assets/img/product1.jpg" alt="Product" class="rounded-lg"></div>
+                    <div class="item"><img src="./assets/img/product2.jpg" alt="Product" class="rounded-lg"></div>
+                    <div class="item"><img src="./assets/img/product3.jpg" alt="Product" class="rounded-lg"></div>
+                </div>
+
+                <!-- Product Details -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-4" id="modalProductName">Product Name</h2>
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <!-- Star rating -->
                         </div>
+                        <span class="ml-2 text-gray-600">(24 reviews)</span>
+                    </div>
+                    <p class="text-2xl font-bold mb-6">€<span id="modalProductPrice">199.00</span></p>
+                    
+                    <!-- Size Selector -->
+                    <div class="mb-6">
+                        <h3 class="text-lg font-semibold mb-2">Select Size</h3>
+                        <div class="flex gap-2">
+                            <button class="size-btn border px-4 py-2 rounded hover:bg-gray-100">S</button>
+                            <button class="size-btn border px-4 py-2 rounded hover:bg-gray-100">M</button>
+                            <button class="size-btn border px-4 py-2 rounded hover:bg-gray-100">L</button>
+                        </div>
+                    </div>
+
+                    <!-- Add to Cart -->
+                    <div class="flex gap-4 mb-8">
+                        <div class="flex items-center border rounded">
+                            <button class="px-4 py-2 text-xl">-</button>
+                            <input type="number" value="1" class="w-16 text-center" min="1">
+                            <button class="px-4 py-2 text-xl">+</button>
+                        </div>
+                        <button class="bg-black text-white px-8 py-3 rounded hover:bg-gray-800 transition-colors">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <!-- Product Description -->
+                    <div class="border-t pt-4">
+                        <h3 class="text-lg font-semibold mb-2">Description</h3>
+                        <p id="modalProductDescription" class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!--Newsletter Section-->
-    <section class="newsletter-section">
-        <div class="text1-container">
-            <p>Sign up for newsletters</p>
-            <div class="underline"></div>
-        </div>
-        <p class="subtext">A collection of textile samples lay spread out on the table Samsa was a travelled</p>
-        <div class="form">
-            <input type="email" class="form__email" placeholder="Enter your email address" />
-            <button class="form__button">
-                <span class="button-text">SUBSCRIBE</span>
-            </button>
-        </div>
-    </section>
 
 
     <!--Footer Section-->
@@ -646,6 +491,7 @@
     <script type="module" src="https://unpkg.com/@material-tailwind/html@latest/scripts/popover.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="./assets/js/accessories.js"></script>
     <script src="./assets/js/owl.js"></script>
     <script src="./assets/js/toggle.js"></script>
     <script src="./assets/js/drawer.js"></script>
