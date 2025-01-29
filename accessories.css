@@ -60,7 +60,6 @@
     -webkit-appearance: none;
 }
 
-<!-- Add to accessories.css -->
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-10px); }
@@ -109,3 +108,37 @@
 .floating-element {
     animation: float 4s ease-in-out infinite;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal Overlay */
+#productModal {
+    backdrop-filter: blur(5px);
+}
+
+/* Carousel Navigation */
+.owl-nav button {
+    background: rgba(0, 0, 0, 0.5) !important;
+    color: white !important;
+    width: 40px;
+    height: 40px;
+    border-radius: 50% !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.owl-nav .owl-prev { left: -50px; }
+.owl-nav .owl-next { right: -50px; }

@@ -81,3 +81,53 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Parallax effect for hero image
+    window.addEventListener('scroll', function() {
+        const scrolled = window.pageYOffset;
+        const parallax = document.querySelector('.hero-image');
+        if(parallax) {
+            parallax.style.transform = `translate3d(0, ${scrolled * 0.4}px, 0)`;
+        }
+    });
+
+    // Intersection Observer for fade-in effects
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.category-card').forEach(card => {
+        observer.observe(card);
+    });
+});
+
+// Open Modal
+document.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('click', () => {
+        document.getElementById('productModal').classList.remove('hidden');
+        $('.owl-carousel').owlCarousel({
+            items: 3,
+            loop: true,
+            nav: true,
+            dots: false
+        });
+    });
+});
+
+// Close Modal
+function closeModal() {
+    document.getElementById('productModal').classList.add('hidden');
+    $('.owl-carousel').trigger('destroy.owl.carousel');
+}
+
+// Change Main Image on Carousel Click
+document.querySelectorAll('.owl-carousel .item img').forEach(img => {
+    img.addEventListener('click', () => {
+        document.getElementById('modalMainImage').src = img.src;
+    });
+});
