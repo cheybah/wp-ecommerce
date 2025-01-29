@@ -7,18 +7,17 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./accessories.css">
     <script src="https://cdn.tailwindcss.com"></script>
-<!-- For components/plugins -->
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        fontFamily: {
-          poppins: ['Poppins', 'sans-serif']
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
         }
-      }
-    }
-  }
-</script>
+    </script>
 
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -215,7 +214,8 @@
                     </li>
 
                     <li class="relative">
-                        <button id="accessoriesDropdown" class="flex items-center text-black text-md font-poppins dropbtn">
+                        <button id="accessoriesDropdown"
+                            class="flex items-center text-black text-md font-poppins dropbtn">
                             Accessories
                             <span id="accessoriesArrow"
                                 class="ml-auto transform transition-transform duration-300">&#9662;</span>
@@ -226,7 +226,7 @@
                             <li><a href="#" class="text-black text-sm font-poppins">Head Pieces</a></li>
                             <li><a href="#" class="text-black text-sm font-poppins">Bouquets</a></li>
                         </ul>
-                    </li>        
+                    </li>
 
                     <li><a href="#" class="text-black text-md font-poppins dropbtn ">Blog</a></li>
                     <li><a href="#" class="text-black text-md font-poppins dropbtn ">Elements</a></li>
@@ -308,100 +308,106 @@
 
 
     <!-- Category Hero Section -->
-    <section class="relative h-96 flex items-center justify-center">
+    <section class="relative h-[80vh] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0">
-            <img src="./assets/img/BANNER_ACC.png" alt="Accessories" class="w-full h-full object-cover opacity-90">
+            <img src="./assets/img/BANNER_ACC.png" alt="Accessories"
+                class="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-1000">
+            <div class="hero-overlay absolute inset-0"></div>
         </div>
-        <div class="relative z-10 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Bridal Accessories</h1>
-            <p class="text-xl text-white max-w-2xl mx-auto">Complete your bridal look with our carefully curated collection</p>
+
+        <div class="relative z-10 text-center px-4 space-y-6">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-4 glow-text">
+                Complete Your Bridal Look 💍
+            </h1>
+            <p class="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto floating-element">
+                Discover handcrafted elegance for your special day
+            </p>
+            <div class="mt-8 floating-element">
+                <div class="inline-block border-2 border-white/30 rounded-full p-1 animate-pulse">
+                    <a href="#categories"
+                        class="bg-white/10 backdrop-blur-lg text-white px-8 py-3 rounded-full font-semibold hover:bg-white/20 transition-all duration-300 flex items-center gap-2">
+                        Explore Collection
+                        <span class="text-xl">↓</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Catchy Text Section -->
+    <section class="text-center py-8 mt-8">
+        <h2 class="text-3xl font-semibold text-gray-800">Find the Perfect Finishing Touch</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto mt-2">From sparkling crowns to elegant bouquets, explore our
+            curated selection for your special day.</p>
+    </section>
+
     <!-- Category Navigation Grid -->
-    <section class="container mx-auto px-6 py-16">
+    <section id="categories" class="container mx-auto px-6 py-16">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Wedding Accessories Card -->
-            <a href="accessories/wedding-accessories.html" class="group relative block overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
-                <img src="./assets/img/accessories/corwn2.jpg" alt="Wedding Accessories" class="w-full h-96 object-cover">
-                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                    <h3 class="text-3xl font-bold text-white tracking-wide">Wedding Accessories</h3>
+            <a href="accessories/wedding-accessories.html" class="category-card group">
+                <div class="category-inner relative h-[500px] overflow-hidden rounded-3xl shadow-2xl">
+                    <img src="./assets/img/accessories/corwn2.jpg"
+                        class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent flex items-end p-8">
+                        <div class="space-y-4">
+                            <h3
+                                class="text-4xl font-bold text-white translate-y-10 group-hover:translate-y-0 transition-transform duration-500">
+                                Wedding Essentials
+                            </h3>
+                            <div class="flex items-center gap-2 discover-arrow">
+                                <span class="text-white/80">Explore Collection</span>
+                                <span class="text-white text-xl transition-transform group-hover:translate-x-2">→</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </a>
 
             <!-- Bridal Crowns Card -->
-            <a href="accessories/bridal-crowns.html" class="group relative block overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
-                <img src="./assets/img/accessories/crown1.jpg" alt="Bridal Crowns" class="w-full h-96 object-cover">
-                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                    <h3 class="text-3xl font-bold text-white tracking-wide">Bridal Crowns</h3>
+            <a href="accessories/bridal-crowns.html" class="category-card group">
+                <div class="category-inner relative h-[500px] overflow-hidden rounded-3xl shadow-2xl">
+                    <img src="./assets/img/accessories/crown1.jpg"
+                        class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent flex items-end p-8">
+                        <div class="space-y-4">
+                            <h3
+                                class="text-4xl font-bold text-white translate-y-10 group-hover:translate-y-0 transition-transform duration-500">
+                                Bride Crowns
+                            </h3>
+                            <div class="flex items-center gap-2 discover-arrow">
+                                <span class="text-white/80">Explore Collection</span>
+                                <span class="text-white text-xl transition-transform group-hover:translate-x-2">→</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </a>
 
             <!-- Bouquets Card -->
-            <a href="accessories/bouquets.html" class="group relative block overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
-                <img src="./assets/img/accessories/bouquet1.jpg" alt="Bouquets" class="w-full h-96 object-cover">
-                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                    <h3 class="text-3xl font-bold text-white tracking-wide">Bouquets</h3>
+            <a href="accessories/bouquets.html" class="category-card group">
+                <div class="category-inner relative h-[500px] overflow-hidden rounded-3xl shadow-2xl">
+                    <img src="./assets/img/accessories/bouquet1.jpg"  alt="Bouquets"
+                        class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent flex items-end p-8">
+                        <div class="space-y-4">
+                            <h3
+                                class="text-4xl font-bold text-white translate-y-10 group-hover:translate-y-0 transition-transform duration-500">
+                                Bouquets
+                            </h3>
+                            <div class="flex items-center gap-2 discover-arrow">
+                                <span class="text-white/80">Explore Collection</span>
+                                <span class="text-white text-xl transition-transform group-hover:translate-x-2">→</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </a>
         </div>
     </section>
-
-    <!-- Product Modal -->
-    <div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
-        <div class="relative max-w-6xl mx-auto bg-white rounded-lg shadow-2xl my-12 p-8">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-3xl text-gray-600">&times;</button>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <!-- Image Carousel -->
-                <div class="owl-carousel owl-theme">
-                    <div class="item"><img src="./assets/img/product1.jpg" alt="Product" class="rounded-lg"></div>
-                    <div class="item"><img src="./assets/img/product2.jpg" alt="Product" class="rounded-lg"></div>
-                    <div class="item"><img src="./assets/img/product3.jpg" alt="Product" class="rounded-lg"></div>
-                </div>
-
-                <!-- Product Details -->
-                <div>
-                    <h2 class="text-3xl font-bold mb-4" id="modalProductName">Product Name</h2>
-                    <div class="flex items-center mb-4">
-                        <div class="flex text-yellow-400">
-                            <!-- Star rating -->
-                        </div>
-                        <span class="ml-2 text-gray-600">(24 reviews)</span>
-                    </div>
-                    <p class="text-2xl font-bold mb-6">€<span id="modalProductPrice">199.00</span></p>
-                    
-                    <!-- Size Selector -->
-                    <div class="mb-6">
-                        <h3 class="text-lg font-semibold mb-2">Select Size</h3>
-                        <div class="flex gap-2">
-                            <button class="size-btn border px-4 py-2 rounded hover:bg-gray-100">S</button>
-                            <button class="size-btn border px-4 py-2 rounded hover:bg-gray-100">M</button>
-                            <button class="size-btn border px-4 py-2 rounded hover:bg-gray-100">L</button>
-                        </div>
-                    </div>
-
-                    <!-- Add to Cart -->
-                    <div class="flex gap-4 mb-8">
-                        <div class="flex items-center border rounded">
-                            <button class="px-4 py-2 text-xl">-</button>
-                            <input type="number" value="1" class="w-16 text-center" min="1">
-                            <button class="px-4 py-2 text-xl">+</button>
-                        </div>
-                        <button class="bg-black text-white px-8 py-3 rounded hover:bg-gray-800 transition-colors">
-                            Add to Cart
-                        </button>
-                    </div>
-
-                    <!-- Product Description -->
-                    <div class="border-t pt-4">
-                        <h3 class="text-lg font-semibold mb-2">Description</h3>
-                        <p id="modalProductDescription" class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
     <!--Footer Section-->
@@ -481,23 +487,24 @@
     <!--Copyright-->
     <div id="copyright" align="center">&copy;</div>
     <script>
-        (function () {
-            let cpr = document.getElementById("copyright");
-            cpr.innerHTML = `Copyright &copy; ${new Date().getFullYear()} <strong> FieldThemes</strong> - All Rights Reserved.`;
-        })();
+            (function () {
+                let cpr = document.getElementById("copyright");
+                cpr.innerHTML = `Copyright &copy; ${new Date().getFullYear()} <strong> FieldThemes</strong> - All Rights Reserved.`;
+            })();
     </script>
 
     <script src="./assets/js/slide.js"></script>
     <script type="module" src="https://unpkg.com/@material-tailwind/html@latest/scripts/popover.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="./assets/js/accessories.js"></script>
     <script src="./assets/js/owl.js"></script>
     <script src="./assets/js/toggle.js"></script>
     <script src="./assets/js/drawer.js"></script>
     <script src="./assets/js/mobileToggle.js"></script>
     <script src="./assets/js/mobileDrawer.js"></script>
     <script src="./assets/js/sideMenuMobile.js"></script>
+    <script src="./assets/js/accessories.js"></script>
+
 
 
 

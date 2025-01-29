@@ -59,3 +59,53 @@
 .quantity-input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
+
+<!-- Add to accessories.css -->
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes text-glow {
+    0% { text-shadow: 0 0 10px rgba(255,255,255,0.3); }
+    50% { text-shadow: 0 0 20px rgba(255,255,255,0.6); }
+    100% { text-shadow: 0 0 10px rgba(255,255,255,0.3); }
+}
+
+.hero-overlay {
+    background: linear-gradient(45deg, rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.4) 100%);
+}
+
+.category-card {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.category-inner {
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.category-card:hover .category-inner {
+    transform: rotateX(15deg) translateY(-10px);
+}
+
+.discover-arrow {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.category-card:hover .discover-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.glow-text {
+    animation: text-glow 3s ease-in-out infinite;
+}
+
+.floating-element {
+    animation: float 4s ease-in-out infinite;
+}
