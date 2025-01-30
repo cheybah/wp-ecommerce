@@ -11,7 +11,6 @@ const products = {
         gallery: [
             "../assets/img/accessories/crown1.jpg",
             "../assets/img/accessories/crown1-1.jpg",
-            "../assets/img/accessories/crown1-2.jpg"
         ],
         discount: "20% OFF"
     },
@@ -24,8 +23,8 @@ const products = {
         mainImage: "../assets/img/accessories/corwn2.jpg",
         gallery: [
             "../assets/img/accessories/corwn2.jpg",
-            "../assets/img/accessories/crown2-1.jpg",
-            "../assets/img/accessories/crown2-2.jpg"
+            "../assets/img/accessories/crown2-2.jpg",
+            "../assets/img/accessories/crown2-3.jpg"
         ],
         discount: "15% OFF"
     },

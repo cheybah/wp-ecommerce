@@ -301,15 +301,107 @@
 
     <!-- Main Content -->
     <main class="pt-24 pb-16">
-        <section class="container mx-auto px-4">
-            <h1 class="text-4xl font-bold text-center mb-12">Bridal Crown Collection</h1>
-
-            <!-- Dynamic Product Grid -->
-            <div id="productsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Product cards will be injected here by JavaScript -->
+        <!-- Hero Section -->
+        <section class="bg-rose-50 py-16 mb-16">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold text-rose-700 mb-4">Discover Royal Bridal Elegance</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+                    Handcrafted crowns designed to make you feel like royalty on your special day
+                </p>
+                <div class="flex justify-center gap-4">
+                    <a href="#productsContainer" class="bg-rose-600 text-white px-8 py-3 rounded-lg hover:bg-rose-700 transition-colors">
+                        Shop Collection
+                    </a>
+                    <a href="#features" class="border-2 border-rose-600 text-rose-600 px-8 py-3 rounded-lg hover:bg-rose-50 transition-colors">
+                        Why Choose Us
+                    </a>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Category Navigation -->
+        <section class="container mx-auto px-4 mb-16">
+            <div class="flex flex-wrap gap-4 justify-center">
+                <button class="px-6 py-2 rounded-full bg-rose-600 text-white">All Crowns</button>
+                <button class="px-6 py-2 rounded-full border hover:bg-rose-50">Pearl Crowns</button>
+                <button class="px-6 py-2 rounded-full border hover:bg-rose-50">Gold Crowns</button>
+                <button class="px-6 py-2 rounded-full border hover:bg-rose-50">Colorful Crowns</button>
+            </div>
+        </section>
+    
+        <!-- Product Grid Section -->
+        <section class="container mx-auto px-4 mb-16">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold mb-4">Our Crown Collection</h1>
+                <p class="text-gray-600 max-w-xl mx-auto">Each piece crafted with precision and attention to detail</p>
+            </div>
+            <div id="productsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+        </section>
+    
+        <!-- Trust Badges -->
+        <section class="bg-gray-50 py-16 mb-16">
+            <div class="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <div class="text-rose-600 text-3xl mb-2">🎁</div>
+                    <h3 class="font-semibold mb-1">Free Shipping</h3>
+                    <p class="text-sm text-gray-600">On all orders over $200</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-rose-600 text-3xl mb-2">💎</div>
+                    <h3 class="font-semibold mb-1">Premium Quality</h3>
+                    <p class="text-sm text-gray-600">Luxury materials</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-rose-600 text-3xl mb-2">🔒</div>
+                    <h3 class="font-semibold mb-1">Secure Payment</h3>
+                    <p class="text-sm text-gray-600">256-bit SSL encryption</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-rose-600 text-3xl mb-2">❤️</div>
+                    <h3 class="font-semibold mb-1">Satisfaction Guarantee</h3>
+                    <p class="text-sm text-gray-600">30-day returns</p>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Featured Story -->
+        <section class="container mx-auto px-4 mb-16">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
+                <div class="md:w-1/2">
+                    <img src="../assets/img/accessories/story.jpg" alt="Crafting Process" class="w-full h-full object-cover">
+                </div>
+                <div class="md:w-1/2 p-12">
+                    <h2 class="text-3xl font-bold mb-4">Artisan Crafted Elegance</h2>
+                    <p class="text-gray-600 mb-6">
+                        Each crown is meticulously handcrafted by our master jewelers, combining traditional 
+                        techniques with modern design. Discover the journey from raw materials to royal elegance.
+                    </p>
+                    <button class="bg-rose-600 text-white px-8 py-3 rounded-lg hover:bg-rose-700 transition-colors">
+                        Our Story
+                    </button>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Newsletter -->
+        <section class="bg-zinc-400 text-white py-16">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-4">Join Our Royal Newsletter</h2>
+                <p class="mb-8 max-w-xl mx-auto">Get exclusive offers, styling tips, and early access to new collections</p>
+                <div class="flex justify-center gap-4">
+                    <input type="email" placeholder="Your email address" class="px-6 py-3 rounded-lg w-80 text-gray-900">
+                    <button class="bg-white text-zinc-700 px-8 py-3 rounded-lg hover:bg-zinc-300 transition-colors">
+                        Subscribe
+                    </button>
+                </div>
             </div>
         </section>
     </main>
+
+
+
+
+
 
     <!-- Product Modal -->
     <div id="productModal" class="fixed inset-0 bg-black/50 z-50 hidden backdrop-blur-sm">
