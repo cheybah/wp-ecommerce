@@ -33,7 +33,7 @@
                 <ul class="flex gap-8">
                     <!-- Home with Dropdown -->
                     <li class="relative dropdown">
-                        <a href="index.html" class="font-poppins dropbtn " id="home">Home</a>
+                        <a href="../index.html" class="font-poppins dropbtn " id="home">Home</a>
                         <div class="dropdown-content hidden">
                             <a href="#">Submenu 1</a>
                             <a href="#">Submenu 2</a>
@@ -58,13 +58,12 @@
                     </li>
                     <!-- Accessories with Dropdown -->
                     <li class="relative dropdown">
-                        <a href="javascript:void(0)" class="font-poppins dropbtn active"
-                            id="accessories">Accessories</a>
+                        <a href="../accessories.html" class="font-poppins dropbtn" id="accessories">Accessories</a>
                         <div class="dropdown-content black-bd hidden">
-                            <a href="accessories/wedding-accessories.html">Wedding Accessories</a>
-                            <a href="accessories/bridal-crowns.html">Bridal Crowns</a>
+                            <a href="wedding-accessories.html">Wedding Accessories</a>
+                            <a href="bridal-crowns.html">Bridal Crowns</a>
                             <a href="#">Head Pieces</a>
-                            <a href="accessories/bouquets.html">Bouquets</a>
+                            <a href="bouquets.html">Bouquets</a>
                         </div>
                     </li>
                     <!-- Blog Menu -->
@@ -176,7 +175,7 @@
                 style="width: 80%; max-width: 300px;">
                 <button id="closeMobileMenu" class="absolute top-4 right-4 text-black text-2xl left-4">&times;</button>
                 <ul class="mt-12 space-y-6 pl-6 font-poppins flex flex-col left-4">
-                    <li><a href="#" class="text-black text-md font-poppins dropbtn ">Home</a></li>
+                    <li><a href="../index.html" class="text-black text-md font-poppins dropbtn ">Home</a></li>
 
                     <li class="relative">
                         <button id="shopDropdown" class="flex items-center text-black text-md font-poppins dropbtn">
@@ -296,7 +295,59 @@
     </div>
 
 
+    <!-- Main Content -->
+    <main class="pt-24 pb-16">
+        <section class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold text-center mb-12">Bridal Bouquets Collection</h1>
 
+            <!-- Dynamic Product Grid -->
+            <div id="productsBouContainer" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product cards will be injected here by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="fixed inset-0 bg-black/50 z-50 hidden backdrop-blur-sm">
+        <div class="relative max-w-6xl mx-auto bg-white rounded-xl shadow-2xl my-8 p-8">
+            <button onclick="closeModal()"
+                class="absolute top-6 right-6 text-3xl text-gray-500 hover:text-gray-700 transition-colors">
+                &times;
+            </button>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Image Gallery -->
+                <div class="space-y-6">
+                    <img id="modalMainImage" src="" alt="" class="w-full h-100 object-cover rounded-xl shadow-lg">
+                    <div class="owl-carousel owl-theme mt-4">
+                        <!-- Carousel items populated dynamically -->
+                    </div>
+                </div>
+
+                <!-- Product Details -->
+                <div class="py-4">
+                    <h2 id="modalProductName" class="text-3xl font-bold mb-4"></h2>
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-amber-400 text-sm">
+                            ★★★★★
+                        </div>
+                        <span class="ml-2 text-gray-500">(128 Reviews)</span>
+                    </div>
+                    <div class="mb-6">
+                        <span id="modalCurrentPrice" class="text-3xl font-bold text-rose-600"></span>
+                        <span id="modalOriginalPrice" class="ml-3 text-lg text-gray-400 line-through"></span>
+                    </div>
+                    <button class="w-full bg-rose-600 text-white py-4 rounded-lg hover:bg-rose-700 transition-colors">
+                        Add to Cart - <span id="modalPriceButton"></span>
+                    </button>
+                    <div class="mt-8 pt-6 border-t">
+                        <h3 class="text-lg font-semibold mb-3">Product Details</h3>
+                        <p id="modalProductDescription" class="text-gray-600 leading-relaxed"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -393,6 +444,7 @@
         <script src="../assets/js/mobileToggle.js"></script>
         <script src="../assets/js/mobileDrawer.js"></script>
         <script src="../assets/js/sideMenuMobile.js"></script>
+        <script src="../assets/js/bouquets.js"></script>
         <script src="../assets/js/accessories.js"></script>
     
     
