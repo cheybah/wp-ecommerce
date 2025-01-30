@@ -131,3 +131,4 @@ document.querySelectorAll('.owl-carousel .item img').forEach(img => {
         document.getElementById('modalMainImage').src = img.src;
     });
 });
+

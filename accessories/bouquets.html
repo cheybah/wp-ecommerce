@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bouquets</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../accessories.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/motion-tailwind.css"
+        rel="stylesheet">
+</head>
+
+<body class="bg-white">
+    <!--Header-->
+    <div class="flex flex-col plx bg-white sticky top-0 shadow-md z-50 ">
+        <div class="relative hidden lg:flex flex-wrap items-center justify-between w-full bg-white group shrink-0 ply">
+
+            <!-- Logo Section for Desktop -->
+            <div>
+                <img src="../assets/img/logo.jpg" alt="Logo">
+            </div>
+
+            <!-- Main Navigation for Desktop -->
+            <div class="flex items-center justify-between gap-14 text-black font-sans md:flex menu-links">
+                <ul class="flex gap-8">
+                    <!-- Home with Dropdown -->
+                    <li class="relative dropdown">
+                        <a href="index.html" class="font-poppins dropbtn " id="home">Home</a>
+                        <div class="dropdown-content hidden">
+                            <a href="#">Submenu 1</a>
+                            <a href="#">Submenu 2</a>
+                            <a href="#">Submenu 3</a>
+                        </div>
+                    </li>
+                    <!-- Shop Menu -->
+                    <li class="relative dropdown">
+                        <a href="javascript:void(0)" class="font-poppins dropbtn">Shop</a>
+                        <div class="dropdown-content black-bd hidden">
+                            <a href="#">About Us</a>
+                            <a href="#">Contact Us</a>
+                        </div>
+                    </li>
+                    <!-- Products Menu -->
+                    <li class="relative dropdown">
+                        <a href="javascript:void(0)" class="font-poppins dropbtn">Products</a>
+                        <div class="dropdown-content black-bd hidden">
+                            <a href="#">About Us</a>
+                            <a href="#">Contact Us</a>
+                        </div>
+                    </li>
+                    <!-- Accessories with Dropdown -->
+                    <li class="relative dropdown">
+                        <a href="javascript:void(0)" class="font-poppins dropbtn active"
+                            id="accessories">Accessories</a>
+                        <div class="dropdown-content black-bd hidden">
+                            <a href="accessories/wedding-accessories.html">Wedding Accessories</a>
+                            <a href="accessories/bridal-crowns.html">Bridal Crowns</a>
+                            <a href="#">Head Pieces</a>
+                            <a href="accessories/bouquets.html">Bouquets</a>
+                        </div>
+                    </li>
+                    <!-- Blog Menu -->
+                    <li class="relative dropdown">
+                        <a href="javascript:void(0)" class="font-poppins dropbtn">Blog</a>
+                        <div class="dropdown-content black-bd hidden">
+                            <a href="#">About Us</a>
+                            <a href="#">Contact Us</a>
+                        </div>
+                    </li>
+                    <!-- Elements -->
+                    <li><a href="javascript:void(0)" class="font-poppins">Elements</a></li>
+                    <!-- Pages with Dropdown -->
+                    <li class="relative dropdown">
+                        <a href="javascript:void(0)" class="font-poppins dropbtn">Pages</a>
+                        <div class="dropdown-content hidden">
+                            <a href="#">About Us</a>
+                            <a href="#">Contact Us</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Desktop Extra Icons Section -->
+            <div class="items-center hidden gap-6 md:flex relative">
+                <!-- User Dropdown for Desktop -->
+                <div class="relative">
+                    <i class="fa fa-user cursor-pointer" id="menuDropdownToggleUser"></i>
+                    <div id="menuDropdownUser"
+                        class="hidden absolute right-0 bg-white min-w-auto shadow-md z-10 font-poppins">
+                        <a href="#" class="block px-4 py-2 text-black hover:bg-gray-200">Profile</a>
+                        <a href="#" class="block px-4 py-2 text-black hover:bg-gray-200">Settings</a>
+                    </div>
+                </div>
+
+                <!-- Menu (Bars) Dropdown for Desktop -->
+                <div class="relative">
+                    <i class="fa fa-bars cursor-pointer" id="menuDropdownToggleBars"></i>
+                    <div id="menuDropdownBars"
+                        class="hidden absolute right-0 bg-white min-w-[250px] shadow-lg z-10 font-poppins p-4">
+                        <!-- Flag Section -->
+                        <div class="flex justify-around gap-2">
+                            <img src="https://flagcdn.com/w40/us.png" alt="US" class="w-8 h-5 border">
+                            <img src="https://flagcdn.com/w40/fr.png" alt="FR" class="w-8 h-5 border">
+                            <img src="https://flagcdn.com/w40/es.png" alt="ES" class="w-8 h-5 border">
+                            <img src="https://flagcdn.com/w40/it.png" alt="IT" class="w-8 h-5 border">
+                            <img src="https://flagcdn.com/w40/sa.png" alt="SA" class="w-8 h-5 border">
+                        </div>
+                        <!-- Currency Buttons -->
+                        <div class="flex justify-around gap-2 mt-4">
+                            <button class="border px-3 py-1 font-medium hover:bg-gray-200">EUR €</button>
+                            <button class="border px-3 py-1 font-medium hover:bg-gray-200">USD $</button>
+                        </div>
+                        <!-- Checkout Section -->
+                        <div class="flex items-center gap-2 mt-4">
+                            <span class="text-black font-medium">✔</span>
+                            <span class="text-black font-medium">Check out</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Search Icon and Dropdown for Desktop -->
+                <div class="relative">
+                    <i class="fa fa-search cursor-pointer" id="searchIcon"></i>
+                    <div id="searchDropdown"
+                        class="hidden absolute right-0 bg-white min-w-[300px] shadow-lg z-10 pl-4 flex items-center">
+                        <input class="search_query flex-grow border-none ml-2" placeholder="Search" />
+                        <div class="search-icon flex justify-center">
+                            <i class="fa fa-search text-white"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cart Icon and Cart Drawer for Desktop -->
+                <div class="ab-iconcart relative topmin">
+                    <i class="fa fa-shopping-cart cursor-pointer" id="cartIcon"></i>
+                    <span class="badge badge-warning" id="lblCartCount">0</span>
+                </div>
+
+                <!-- Cart Drawer (Hidden on Small Screens) -->
+                <div id="cartDrawer"
+                    class="fixed top-0 right-[-100%] w-[450px] h-full bg-white shadow-lg z-50 transition-transform">
+                    <button id="closeCartDrawer" class="absolute top-4 right-4 text-black text-2xl">&times;</button>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-4">Your Cart</h3>
+                        <p class="text-gray-600">There are no more items in your cart</p>
+                    </div>
+                </div>
+                <!-- Overlay (For Cart Drawer) -->
+                <div id="overlay"></div>
+            </div>
+        </div>
+
+        <!-- Mobile View: Visible only on small screens -->
+        <div class="block sm:block lg:hidden bg-white ply">
+            <!-- Logo for Mobile -->
+            <div class="flex justify-between items-center px-4 py-2 pb">
+                <!-- Hamburger Icon -->
+                <button id="mobileMenuToggle" class="text-xl text-black">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <!-- Logo -->
+                <img src="../assets/img/logo.jpg" alt="Logo" class="h-10 absolute left-0 right-0 mx-auto">
+            </div>
+
+            <!-- Mobile Side Menu -->
+            <div id="mobileSideMenu"
+                class="fixed left-[-100%] h-full bg-white shadow-lg z-50 transition-transform duration-500 ease-in-out"
+                style="width: 80%; max-width: 300px;">
+                <button id="closeMobileMenu" class="absolute top-4 right-4 text-black text-2xl left-4">&times;</button>
+                <ul class="mt-12 space-y-6 pl-6 font-poppins flex flex-col left-4">
+                    <li><a href="#" class="text-black text-md font-poppins dropbtn ">Home</a></li>
+
+                    <li class="relative">
+                        <button id="shopDropdown" class="flex items-center text-black text-md font-poppins dropbtn">
+                            Shop
+                            <span id="shopArrow"
+                                class="ml-auto transform transition-transform duration-300">&#9662;</span>
+                        </button>
+                        <ul id="shopSubmenu" class="mt-2 pl-3 hidden flex flex-col gap-ul">
+                            <li><a href="#" class="text-black text-sm font-poppins">About Us</a></li>
+                            <li><a href="#" class="text-black text-sm font-poppins">Conatct Us</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="relative">
+                        <button id="productsDropdown" class="flex items-center text-black text-md font-poppins dropbtn">
+                            Products
+                            <span id="productsArrow"
+                                class="ml-auto transform transition-transform duration-300">&#9662;</span>
+                        </button>
+                        <ul id="productsSubmenu" class="mt-2 pl-3 hidden flex flex-col gap-ul">
+                            <li><a href="#" class="text-black text-sm font-poppins">About Us Products</a></li>
+                            <li><a href="#" class="text-black text-sm font-poppins">Contact Us Products</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="relative">
+                        <button id="accessoriesDropdown"
+                            class="flex items-center text-black text-md font-poppins dropbtn">
+                            Accessories
+                            <span id="accessoriesArrow"
+                                class="ml-auto transform transition-transform duration-300">&#9662;</span>
+                        </button>
+                        <ul id="accessoriesSubmenu" class="mt-2 pl-3 hidden flex flex-col gap-ul">
+                            <li><a href="#" class="text-black text-sm font-poppins">Wedding Accessories</a></li>
+                            <li><a href="#" class="text-black text-sm font-poppins">Bridal Crowns</a></li>
+                            <li><a href="#" class="text-black text-sm font-poppins">Head Pieces</a></li>
+                            <li><a href="#" class="text-black text-sm font-poppins">Bouquets</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#" class="text-black text-md font-poppins dropbtn ">Blog</a></li>
+                    <li><a href="#" class="text-black text-md font-poppins dropbtn ">Elements</a></li>
+                    <li><a href="#" class="text-black text-md font-poppins dropbtn ">Pages</a></li>
+                </ul>
+            </div>
+
+            <!-- Icons for Mobile -->
+            <div class="flex justify-between items-center space-x-0 w-full">
+                <!-- User Icon Box -->
+                <div class="mobile-icon-box w-full h-16 flex justify-center items-center bg-red-500 relative">
+                    <i class="fa fa-user text-white text-xl cursor-pointer" id="mobileDropdownToggleUser"></i>
+                    <div id="mobileDropdownUser"
+                        class="hidden absolute top-16 bg-white shadow-md z-10 p-4 font-poppins">
+                        <a href="#" class="block px-4 py-2 text-black hover:bg-gray-200">Profile</a>
+                        <a href="#" class="block px-4 py-2 text-black hover:bg-gray-200">Settings</a>
+                    </div>
+                </div>
+                <!-- Menu Icon Box -->
+                <div class="mobile-icon-box w-full h-16 flex justify-center items-center bg-red-500 relative bl">
+                    <i class="fa fa-bars text-white text-xl cursor-pointer" id="mobileDropdownToggleBars"></i>
+                    <div id="mobileDropdownBars"
+                        class="hidden absolute top-16 bg-white shadow-lg z-10 p-4 font-poppins min-w-[250px]">
+                        <!-- Flag Section -->
+                        <div class="flex justify-around gap-2">
+                            <img src="https://flagcdn.com/w40/us.png" alt="US" class="w-8 h-5 border">
+                            <img src="https://flagcdn.com/w40/fr.png" alt="FR" class="w-8 h-5 border">
+                            <img src="https://flagcdn.com/w40/es.png" alt="ES" class="w-8 h-5 border">
+                            <img src="https://flagcdn.com/w40/it.png" alt="IT" class="w-8 h-5 border">
+                            <img src="https://flagcdn.com/w40/sa.png" alt="SA" class="w-8 h-5 border">
+                        </div>
+                        <!-- Currency Buttons -->
+                        <div class="flex justify-around gap-2 mt-4">
+                            <button class="border px-3 py-1 font-medium hover:bg-gray-200">EUR €</button>
+                            <button class="border px-3 py-1 font-medium hover:bg-gray-200">USD $</button>
+                        </div>
+                        <!-- Checkout Section -->
+                        <div class="flex items-center gap-2 mt-4">
+                            <span class="text-black font-medium">✔</span>
+                            <span class="text-black font-medium">Check out</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Search Icon Box -->
+                <div class="mobile-icon-box w-full h-16 flex justify-center items-center bg-red-500 relative bl">
+                    <i class="fa fa-search text-white text-xl cursor-pointer" id="mobileDropdownToggleSearch"></i>
+                    <div id="mobileDropdownSearch"
+                        class="hidden absolute right-0 bg-white min-w-[300px] shadow-lg z-10 pl-4 flex items-center">
+                        <input class="search_query flex-grow border-none ml-2" placeholder="Search" />
+                        <div class="search-icon flex justify-center">
+                            <i class="fa fa-search text-white"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- Shopping Cart Icon Box -->
+                <!-- Mobile Cart Icon -->
+                <div class="mobile-icon-box w-full h-16 flex justify-center items-center bg-red-500 relative bl">
+                    <i class="fa fa-shopping-cart text-white text-xl cursor-pointer" id="mobileCartIcon"></i>
+                    <span class="badge badge-warning" id="lblCartCountMobile">0</span>
+                </div>
+
+                <!-- Mobile Cart Drawer (Hidden Initially) -->
+                <div id="mobileCartDrawer"
+                    class="fixed top-0 right-[-100%] w-[450px] h-full bg-white shadow-lg z-50 transition-transform">
+                    <button id="closeMobileCartDrawer"
+                        class="absolute top-4 right-4 text-black text-2xl">&times;</button>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-4">Your Cart</h3>
+                        <p class="text-gray-600">There are no items in your cart</p>
+                    </div>
+                </div>
+
+                <!-- Overlay (For Cart Drawer) -->
+                <div id="cartOverlay" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 z-40 hidden"></div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+        <!--Footer Section-->
+        <footer id="footer">
+            <div class="footer-content container">
+                <!-- Footer Main Section -->
+                <div class="footer-main-section">
+                    <div class="footer-columns">
+                        <!-- Contact Us Column -->
+                        <div class="footer-column">
+                            <img src="https://newyork.fieldthemes.com/fashion30/home31/img/cms/home 31/logo_footer_op.png"
+                                alt="Logo" class="footer-logo">
+                            <ul class="footer-list mt">
+                                <li><i class="fa fa-home"></i> No 40 Baria Street 133/2, New York, USA</li>
+                                <li><i class="fa fa-phone"></i> (+08) 123 456 789</li>
+                                <li><i class="fa fa-envelope"></i> <a
+                                        href="mailto:Youremail@gmail.com">Youremail@gmail.com</a></li>
+                            </ul>
+                        </div>
+                        <!-- Other Columns -->
+                        <div class="footer-column">
+                            <h4 class="footer-title">Customer Services</h4>
+                            <ul class="footer-list mt">
+                                <li><a href="#">Shipping Policy</a></li>
+                                <li><a href="#">Compensation First</a></li>
+                                <li><a href="#">Return Policy</a></li>
+                                <li><a href="#">Shipping Info</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4 class="footer-title">Information</h4>
+                            <ul class="footer-list mt">
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Delivery Information</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4 class="footer-title">Contact Us</h4>
+                            <ul class="footer-list mt">
+                                <li><a href="#">Page</a></li>
+                                <li><a href="#">Shipping</a></li>
+                                <li><a href="#">Information</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Social Icons -->
+                <div class="footer-social-section">
+                    <div class="footer-social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-dribbble"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-vimeo"></i></a>
+                    </div>
+                </div>
+                <!-- Additional Links Section -->
+                <div class="footer-additional-links">
+                    <a href="#" class="fab">About Us</a>
+                    <a href="#" class="fab">Blog</a>
+                    <a href="#" class="fab">Order Tracking</a>
+                    <a href="#" class="fab">Terms & Conditions</a>
+                    <a href="#" class="fab">FAQs</a>
+                    <a href="#" class="fab">Contact</a>
+                </div>
+                <!-- Payment Methods -->
+                <div class="payment-methods flex justify-center items-center h-32 mt-10 max-w-full">
+                    <img src="https://newyork.fieldthemes.com/fashion30/home31/img/cms/home 31/payment_op.png"
+                        alt="Payment Methods">
+                </div>
+            </div>
+        </footer>
+    
+    
+        <!--Copyright-->
+        <div id="copyright" align="center">&copy;</div>
+        <script>
+            (function () {
+                let cpr = document.getElementById("copyright");
+                cpr.innerHTML = `Copyright &copy; ${new Date().getFullYear()} <strong> FieldThemes</strong> - All Rights Reserved.`;
+            })();
+        </script>
+    
+        <script src="../assets/js/slide.js"></script>
+        <script type="module" src="https://unpkg.com/@material-tailwind/html@latest/scripts/popover.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script src="../assets/js/owl.js"></script>
+        <script src="../assets/js/toggle.js"></script>
+        <script src="../assets/js/drawer.js"></script>
+        <script src="../assets/js/mobileToggle.js"></script>
+        <script src="../assets/js/mobileDrawer.js"></script>
+        <script src="../assets/js/sideMenuMobile.js"></script>
+        <script src="../assets/js/accessories.js"></script>
+    
+    
+    
+    
+    </body>
+    <html>

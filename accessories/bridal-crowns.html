@@ -58,7 +58,8 @@
                     </li>
                     <!-- Accessories with Dropdown -->
                     <li class="relative dropdown">
-                        <a href="javascript:void(0)" class="font-poppins dropbtn active" id="accessories">Accessories</a>
+                        <a href="javascript:void(0)" class="font-poppins dropbtn active"
+                            id="accessories">Accessories</a>
                         <div class="dropdown-content black-bd hidden">
                             <a href="accessories/wedding-accessories.html">Wedding Accessories</a>
                             <a href="accessories/bridal-crowns.html">Bridal Crowns</a>
@@ -294,103 +295,56 @@
         </div>
     </div>
 
-    <!-- Bridal Crowns Products Section -->
-    <section class="container mx-auto px-6 py-16">
-        <h2 class="text-4xl font-bold text-center mb-8">Bridal Crowns</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Product Card 1 -->
-            <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer">
-                <div class="relative h-82 overflow-hidden">
-                    <img src="../assets/img/accessories/crown1.jpg" alt="Crown 1" class="w-full h-full object-cover">
-                    <span class="absolute top-2 right-2 bg-red-500 text-white px-3 py-1 rounded-full text-sm">20% OFF</span>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">Elegant Pearl Crown</h3>
-                    <div class="flex items-center gap-2">
-                        <span class="text-2xl font-bold text-gray-900">$199</span>
-                        <span class="text-lg text-gray-500 line-through">$249</span>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Product Card 2 -->
-            <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer">
-                <div class="relative h-82 overflow-hidden">
-                    <img src="../assets/img/accessories/corwn2.jpg" alt="Crown 2" class="w-full h-full object-cover">
-                    <span class="absolute top-2 right-2 bg-red-500 text-white px-3 py-1 rounded-full text-sm">15% OFF</span>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">Golden Royal Crown</h3>
-                    <div class="flex items-center gap-2">
-                        <span class="text-2xl font-bold text-gray-900">$299</span>
-                        <span class="text-lg text-gray-500 line-through">$349</span>
-                    </div>
-                </div>
-            </div>
 
-            
-            <!-- Product Card 3 -->
-            <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer">
-                <div class="relative h-82 overflow-hidden">
-                    <img src="../assets/img/accessories/crown4.jpg" alt="Crown 2" class="w-full h-full object-cover">
-                    <span class="absolute top-2 right-2 bg-red-500 text-white px-3 py-1 rounded-full text-sm">15% OFF</span>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">Golden Royal Crown</h3>
-                    <div class="flex items-center gap-2">
-                        <span class="text-2xl font-bold text-gray-900">$299</span>
-                        <span class="text-lg text-gray-500 line-through">$349</span>
-                    </div>
-                </div>
-            </div>
+    <!-- Main Content -->
+    <main class="pt-24 pb-16">
+        <section class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold text-center mb-12">Bridal Crown Collection</h1>
 
-        </div>
-    </section>
+            <!-- Dynamic Product Grid -->
+            <div id="productsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product cards will be injected here by JavaScript -->
+            </div>
+        </section>
+    </main>
 
     <!-- Product Modal -->
-    <div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
-        <div class="relative max-w-6xl mx-auto bg-white rounded-lg shadow-2xl my-12 p-8">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-3xl text-gray-600">&times;</button>
-            
+    <div id="productModal" class="fixed inset-0 bg-black/50 z-50 hidden backdrop-blur-sm">
+        <div class="relative max-w-6xl mx-auto bg-white rounded-xl shadow-2xl my-8 p-8">
+            <button onclick="closeModal()"
+                class="absolute top-6 right-6 text-3xl text-gray-500 hover:text-gray-700 transition-colors">
+                &times;
+            </button>
+
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <!-- Image Gallery -->
-                <div>
-                    <img id="modalMainImage" src="../assets/img/accessories/crown1.jpg" alt="Main Image" class="w-full h-[35rem] object-cover rounded-lg">
+                <div class="space-y-6">
+                    <img id="modalMainImage" src="" alt="" class="w-full h-100 object-cover rounded-xl shadow-lg">
                     <div class="owl-carousel owl-theme mt-4">
-                        <div class="item"><img src="../assets/img/accessories/crown1.jpg" alt="Image 1" class="w-full h-24 object-cover rounded-lg cursor-pointer"></div>
-                        <div class="item"><img src="../assets/img/accessories/crown1-1.jpg" alt="Image 2" class="w-full h-24 object-cover rounded-lg cursor-pointer"></div>
+                        <!-- Carousel items populated dynamically -->
                     </div>
                 </div>
 
                 <!-- Product Details -->
-                <div>
-                    <h2 id="modalProductName" class="text-3xl font-bold mb-4">Elegant Pearl Crown</h2>
+                <div class="py-4">
+                    <h2 id="modalProductName" class="text-3xl font-bold mb-4"></h2>
                     <div class="flex items-center mb-4">
-                        <div class="flex text-yellow-400">
-                            <!-- Star rating -->
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
+                        <div class="flex text-amber-400 text-sm">
+                            ★★★★★
                         </div>
-                        <span class="ml-2 text-gray-600">(24 reviews)</span>
+                        <span class="ml-2 text-gray-500">(128 Reviews)</span>
                     </div>
-                    <p class="text-2xl font-bold mb-6">$<span id="modalProductPrice">199</span></p>
-                    
-                    <!-- Add to Cart -->
-                    <div class="flex gap-4 mb-8">
-                        <button class="bg-black text-white px-8 py-3 rounded hover:bg-gray-800 transition-colors w-full">
-                            Add to Cart
-                        </button>
+                    <div class="mb-6">
+                        <span id="modalCurrentPrice" class="text-3xl font-bold text-rose-600"></span>
+                        <span id="modalOriginalPrice" class="ml-3 text-lg text-gray-400 line-through"></span>
                     </div>
-
-                    <!-- Product Description -->
-                    <div class="border-t pt-4">
-                        <h3 class="text-lg font-semibold mb-2">Description</h3>
-                        <p id="modalProductDescription" class="text-gray-600">
-                            This elegant pearl crown is perfect for brides looking for a timeless and sophisticated look. Handcrafted with premium materials, it adds a touch of royalty to your special day.
-                        </p>
+                    <button class="w-full bg-rose-600 text-white py-4 rounded-lg hover:bg-rose-700 transition-colors">
+                        Add to Cart - <span id="modalPriceButton"></span>
+                    </button>
+                    <div class="mt-8 pt-6 border-t">
+                        <h3 class="text-lg font-semibold mb-3">Product Details</h3>
+                        <p id="modalProductDescription" class="text-gray-600 leading-relaxed"></p>
                     </div>
                 </div>
             </div>
@@ -398,8 +352,8 @@
     </div>
 
 
-      <!--Footer Section-->
-      <footer id="footer">
+    <!--Footer Section-->
+    <footer id="footer">
         <div class="footer-content container">
             <!-- Footer Main Section -->
             <div class="footer-main-section">
@@ -475,10 +429,10 @@
     <!--Copyright-->
     <div id="copyright" align="center">&copy;</div>
     <script>
-            (function () {
-                let cpr = document.getElementById("copyright");
-                cpr.innerHTML = `Copyright &copy; ${new Date().getFullYear()} <strong> FieldThemes</strong> - All Rights Reserved.`;
-            })();
+        (function () {
+            let cpr = document.getElementById("copyright");
+            cpr.innerHTML = `Copyright &copy; ${new Date().getFullYear()} <strong> FieldThemes</strong> - All Rights Reserved.`;
+        })();
     </script>
 
     <script src="../assets/js/slide.js"></script>
@@ -491,6 +445,7 @@
     <script src="../assets/js/mobileToggle.js"></script>
     <script src="../assets/js/mobileDrawer.js"></script>
     <script src="../assets/js/sideMenuMobile.js"></script>
+    <script src="../assets/js/bridal-crown.js"></script>
     <script src="../assets/js/accessories.js"></script>
 
 
