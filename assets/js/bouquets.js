@@ -3,10 +3,10 @@
 const productsBou = {
     bouquet1: {
         id: 'bouquet1',
-        name: "Elegant Pearl Crown",
+        name: "Silk Flower Bouquet",
         price: "199",
         originalPrice: "249",
-        description: "Handcrafted silver crown with freshwater pearls and Swarovski crystals. Features adjustable sizing for perfect fit.",
+        description: "A timeless and elegant arrangement featuring luxurious silk flowers, carefully crafted to mimic the delicate beauty of real blossoms. This bouquet boasts large, soft petals that exude grace and charm, making it a perfect choice for sophisticated décor, weddings, or as a heartfelt gift that will never fade.",
         mainImage: "../assets/img/accessories/bouquet1.jpg",
         gallery: [
             "../assets/img/accessories/bouquet1.jpg",
@@ -16,10 +16,10 @@ const productsBou = {
     },
     bouquet2: {
         id: 'bouquet2',
-        name: "Golden Royal Crown",
+        name: "White Heaven Bouquet",
         price: "299",
         originalPrice: "349",
-        description: "24k gold-plated brass crown with intricate filigree work and crystal embellishments.",
+        description: "A stunning collection of pristine artificial white flowers, symbolizing purity, peace, and elegance. This bouquet radiates a heavenly aura, perfect for serene home décor, wedding arrangements, or as a graceful centerpiece that brings an air of tranquility to any space.",
         mainImage: "../assets/img/accessories/bouquet2.jpg",
         gallery: [
             "../assets/img/accessories/bouquet2.jpg",
@@ -29,10 +29,10 @@ const productsBou = {
     },
     bouquet3: {
         id: 'bouquet3',
-        name: "Red Royal Crown",
+        name: "Red Royalty Bouquet",
         price: "299",
         originalPrice: "349",
-        description: "Vibrant red enamel crown with floral motifs and pearl accents.",
+        description: "A bold and majestic arrangement of deep red artificial flowers, exuding passion, strength, and regal charm. This luxurious bouquet makes a powerful statement, whether used for romantic gestures, grand celebrations, or elegant interior décor that demands attention.",
         mainImage: "../assets/img/accessories/bouquet3.jpg",
         gallery: [
             "../assets/img/accessories/bouquet3.jpg",
@@ -42,10 +42,10 @@ const productsBou = {
     },
     bouquet4: {
         id: 'bouquet4',
-        name: "Red Royal Crown",
+        name: "Midnight Bloom Bouquet",
         price: "299",
         originalPrice: "349",
-        description: "Vibrant red enamel crown with floral motifs and pearl accents.",
+        description: "A mesmerizing bouquet featuring dark blue artificial flowers, evoking the mystery and allure of a midnight sky. Rich and captivating, this arrangement is perfect for adding a touch of sophistication and enchantment to any setting, making it a unique and stylish décor piece.",
         mainImage: "../assets/img/accessories/bouquet4.jpg",
         gallery: [
             "../assets/img/accessories/bouquet4.jpg",
@@ -55,10 +55,10 @@ const productsBou = {
     },
     bouquet5: {
         id: 'bouquet5',
-        name: "Red Royal Crown",
+        name: "Ethereal Crystal Bouquet",
         price: "299",
         originalPrice: "349",
-        description: "Vibrant red enamel crown with floral motifs and pearl accents.",
+        description: "A breathtaking arrangement of shimmering crystal beads, designed to capture light and create a dazzling display of elegance. This radiant bouquet is perfect for modern décor, glamorous events, or as a unique, everlasting keepsake that sparkles with every movement.",
         mainImage: "../assets/img/accessories/bouquet5.jpg",
         gallery: [
             "../assets/img/accessories/bouquet5.jpg",
@@ -87,8 +87,8 @@ function generateProductCards() {
             <div class="p-6">
                 <h3 class="text-xl font-semibold mb-2">${product.name}</h3>
                 <div class="flex items-baseline gap-3">
-                    <span class="text-2xl font-bold text-rose-600">$${product.price}</span>
-                    <span class="text-lg text-gray-400 line-through">$${product.originalPrice}</span>
+                    <span class="text-2xl font-bold text-rose-600">€${product.price}</span>
+                    <span class="text-lg text-gray-400 line-through">€${product.originalPrice}</span>
                 </div>
             </div>
         `;
@@ -116,9 +116,9 @@ function showProductModal(product) {
 
     // Update main content first
     document.getElementById('modalProductName').textContent = product.name;
-    document.getElementById('modalCurrentPrice').textContent = `$${product.price}`;
-    document.getElementById('modalOriginalPrice').textContent = `$${product.originalPrice}`;
-    document.getElementById('modalPriceButton').textContent = `$${product.price}`;
+    document.getElementById('modalCurrentPrice').textContent = `€${product.price}`;
+    document.getElementById('modalOriginalPrice').textContent = `€${product.originalPrice}`;
+    document.getElementById('modalPriceButton').textContent = `€${product.price}`;
     document.getElementById('modalProductDescription').textContent = product.description;
     
     const mainImg = document.getElementById('modalMainImage');

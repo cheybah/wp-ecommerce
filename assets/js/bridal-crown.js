@@ -3,10 +3,10 @@
 const products = {
     crown1: {
         id: 'crown1',
-        name: "Elegant Pearl Crown",
-        price: "199",
-        originalPrice: "249",
-        description: "Handcrafted silver crown with freshwater pearls and Swarovski crystals. Features adjustable sizing for perfect fit.",
+        name: "Matia Stone And Crystal Crown",
+        price: "125",
+        originalPrice: "148",
+        description: "Matia Zircon Stone And Crystal Beads And Pearls Bridal Crown.",
         mainImage: "../assets/img/accessories/crown1.jpg",
         gallery: [
             "../assets/img/accessories/crown1.jpg",
@@ -16,10 +16,10 @@ const products = {
     },
     crown2: {
         id: 'crown2',
-        name: "Golden Royal Crown",
-        price: "299",
-        originalPrice: "349",
-        description: "24k gold-plated brass crown with intricate filigree work and crystal embellishments.",
+        name: "Vera Red Emerald Crown",
+        price: "126",
+        originalPrice: "150",
+        description: "Vera Zircon Stone And Crystal Bead Henna Crown - Red",
         mainImage: "../assets/img/accessories/corwn2.jpg",
         gallery: [
             "../assets/img/accessories/corwn2.jpg",
@@ -30,10 +30,10 @@ const products = {
     },
     crown3: {
         id: 'crown3',
-        name: "Red Royal Crown",
-        price: "299",
-        originalPrice: "349",
-        description: "Vibrant red enamel crown with floral motifs and pearl accents.",
+        name: "Myron Zircon Crown",
+        price: "165",
+        originalPrice: "200",
+        description: "Myron Zircon Stone Full Turtle Bridal Crown",
         mainImage: "../assets/img/accessories/crown4.jpg",
         gallery: [
             "../assets/img/accessories/crown4.jpg",
@@ -62,8 +62,8 @@ function generateProductCards() {
             <div class="p-6">
                 <h3 class="text-xl font-semibold mb-2">${product.name}</h3>
                 <div class="flex items-baseline gap-3">
-                    <span class="text-2xl font-bold text-rose-600">$${product.price}</span>
-                    <span class="text-lg text-gray-400 line-through">$${product.originalPrice}</span>
+                    <span class="text-2xl font-bold text-rose-600">€${product.price}</span>
+                    <span class="text-lg text-gray-400 line-through">€${product.originalPrice}</span>
                 </div>
             </div>
         `;
@@ -72,8 +72,6 @@ function generateProductCards() {
         container.appendChild(card);
     });
 }
-
-// Show Product Modal
 
 // Show Product Modal
 function showProductModal(product) {
@@ -91,9 +89,9 @@ function showProductModal(product) {
 
     // Update main content first
     document.getElementById('modalProductName').textContent = product.name;
-    document.getElementById('modalCurrentPrice').textContent = `$${product.price}`;
-    document.getElementById('modalOriginalPrice').textContent = `$${product.originalPrice}`;
-    document.getElementById('modalPriceButton').textContent = `$${product.price}`;
+    document.getElementById('modalCurrentPrice').textContent = `€${product.price}`;
+    document.getElementById('modalOriginalPrice').textContent = `€${product.originalPrice}`;
+    document.getElementById('modalPriceButton').textContent = `€${product.price}`;
     document.getElementById('modalProductDescription').textContent = product.description;
     
     const mainImg = document.getElementById('modalMainImage');
