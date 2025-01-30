@@ -1,9 +1,36 @@
-document.getElementById("mobileMenuToggle").addEventListener("click", function () {
-    document.getElementById("mobileSideMenu").style.left = "0";
+document.getElementById("mobileMenuToggle").addEventListener("click", function (event) {
+    const mobileMenu = document.getElementById("mobileSideMenu");
+
+    // Toggle menu visibility
+    if (mobileMenu.style.left === "0px") {
+        mobileMenu.style.left = "-100%";
+    } else {
+        mobileMenu.style.left = "0";
+    }
+
+    // Stop click from propagating to document
+    event.stopPropagation();
 });
 
+// Close menu when clicking the close button
 document.getElementById("closeMobileMenu").addEventListener("click", function () {
     document.getElementById("mobileSideMenu").style.left = "-100%";
+});
+
+// Close menu when clicking outside
+document.addEventListener("click", function (event) {
+    const mobileMenu = document.getElementById("mobileSideMenu");
+    const toggleButton = document.getElementById("mobileMenuToggle");
+
+    // Check if the clicked area is NOT inside the menu or the toggle button
+    if (!mobileMenu.contains(event.target) && event.target !== toggleButton) {
+        mobileMenu.style.left = "-100%";
+    }
+});
+
+// Stop menu from closing when clicking inside it
+document.getElementById("mobileSideMenu").addEventListener("click", function (event) {
+    event.stopPropagation();
 });
 
 //dropdown menu for shop
